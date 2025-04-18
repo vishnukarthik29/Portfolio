@@ -1,7 +1,11 @@
 <template>
   <header class="fixed top-0 w-full z-50 backdrop-blur-sm bg-white/30 dark:bg-black/30 shadow-md">
     <nav class="max-w-screen mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="/"><h1 class="text-xl font-bold major-mono-display-regular">VK</h1></a>
+      <a href="/"
+        ><h1 class="text-xl font-bold major-mono-display-regular text-black dark:text-white">
+          VK
+        </h1></a
+      >
 
       <!-- Desktop Menu -->
       <ul class="hidden md:flex space-x-6 font-medium text-black dark:text-white">
