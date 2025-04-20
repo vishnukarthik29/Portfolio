@@ -10,7 +10,7 @@
       <!-- Social Buttons -->
       <div class="flex flex-wrap justify-center gap-4 mb-6">
         <a
-          href="/vishnukarthik.pdf"
+          href="/Portfolio/vishnukarthik.pdf"
           download
           class="flex items-center gap-2 px-4 py-2 bg-[#E8E8E8] dark:bg-gray-800 text-black dark:text-white rounded-lg shadow hover:bg-gray-300 transition"
         >
