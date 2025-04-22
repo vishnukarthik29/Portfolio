@@ -9,8 +9,8 @@
       <ul class="hidden md:flex space-x-6 font-medium text-black dark:text-white">
         <li><router-link to="/" class="hover:underline">Home</router-link></li>
         <li><router-link to="/about" class="hover:underline">About</router-link></li>
-        <li><router-link to="#projects" class="hover:underline">Projects</router-link></li>
-        <li><router-link to="#contact" class="hover:underline">Contact</router-link></li>
+        <li><router-link to="/Projects" class="hover:underline">Projects</router-link></li>
+        <li><router-link to="/Contact" class="hover:underline">Contact</router-link></li>
       </ul>
 
       <button @click="toggleDarkMode" class="text-xl">
@@ -36,12 +36,12 @@
           <router-link to="/about" class="hover:underline" @click="closeMenu">About</router-link>
         </li>
         <li>
-          <router-link to="#projects" class="hover:underline" @click="closeMenu"
+          <router-link to="/Projects" class="hover:underline" @click="closeMenu"
             >Projects</router-link
           >
         </li>
         <li>
-          <router-link to="#contact" class="hover:underline" @click="closeMenu"
+          <router-link to="/Contact" class="hover:underline" @click="closeMenu"
             >Contact</router-link
           >
         </li>

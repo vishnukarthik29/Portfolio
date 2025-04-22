@@ -10,7 +10,7 @@
       <!-- Social Buttons -->
       <div class="flex flex-wrap justify-center gap-4 mb-6">
         <a
-          href="/vishnukarthik.pdf"
+          :href="resumeUrl"
           download
           class="flex items-center gap-2 px-4 py-2 bg-[#E8E8E8] dark:bg-gray-800 text-black dark:text-white rounded-lg shadow hover:bg-gray-300 transition"
         >
@@ -36,13 +36,13 @@
         >
           <Mail class="w-5 h-5" />
         </a>
-        <a
+        <!-- <a
           href="https://instagram.com/_vk__vinci_"
           target="_blank"
           class="flex items-center gap-2 px-4 py-2 bg-[#E8E8E8] dark:bg-gray-800 text-black dark:text-white rounded-lg shadow hover:bg-gray-100 transition"
         >
           <Instagram class="w-5 h-5" />
-        </a>
+        </a> -->
       </div>
       <div class="p-4">
         <Time />
@@ -57,6 +57,7 @@
 <script setup>
 import Time from '../views/Time.vue'
 import Technologies from '../views/Technologies.vue'
+const resumeUrl = `${import.meta.env.BASE_URL}vishnukarthik.pdf`
 // Lucide Icons
 import { Github, Linkedin, Mail, Instagram, Download } from 'lucide-vue-next'
 </script>

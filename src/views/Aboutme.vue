@@ -9,7 +9,7 @@
         alt="Profile Photo"
         class="mx-auto w-32 h-32 sm:w-40 sm:h-40 rounded-full shadow-lg border-4 border-white object-cover"
       />
-      <h1 class="text-2xl sm:text-3xl font-bold mt-4">
+      <h1 class="text-2xl sm:text-3xl font-bold mt-4 text-black dark:text-white">
         Hi, I'm <span class="text-white dark:text-black">Vishnu Karthik</span>
       </h1>
       <p
@@ -21,7 +21,7 @@
       </p>
       <div class="block sm:mt-6 sm:flex sm:justify-center">
         <h3
-          class="text-lg sm:text-xl md:text-3xl font-bold mt-6 text-black dark:text-white mx-auto"
+          class="text-lg sm:text-xl md:text-3xl font-bold mt-6 text-white dark:text-black mx-auto"
         >
           Growth doesn’t happen in the spotlight. It happens in silence, in every late-night
           compile.
@@ -40,7 +40,7 @@
         <div
           v-for="(exp, index) in experiences"
           :key="index"
-          class="bg-[#E8E8E8] dark:bg-gray-800 rounded-2xl p-6 shadow-lg transition-transform hover:scale-105"
+          class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg transition-transform hover:scale-105"
         >
           <h3 class="text-lg sm:text-xl font-bold text-gray-800 dark:text-white">
             {{ exp.title }}
