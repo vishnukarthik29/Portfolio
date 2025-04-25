@@ -71,9 +71,9 @@ const closeMenu = () => {
   isOpen.value = false
 }
 
-const toggleDarkMode = () => {
-  isDark.value = !isDark.value
-  if (isDark.value) {
+const applyDarkMode = (dark) => {
+  isDark.value = dark
+  if (dark) {
     document.documentElement.classList.add('dark')
     localStorage.setItem('theme', 'dark')
   } else {
@@ -82,16 +82,17 @@ const toggleDarkMode = () => {
   }
 }
 
+const toggleDarkMode = () => {
+  applyDarkMode(!isDark.value)
+}
+
 onMounted(() => {
-  // Check localStorage theme on load
-  const savedTheme = localStorage.getItem('theme')
-  if (
-    savedTheme === 'dark' ||
-    (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)
-  ) {
-    isDark.value = true
-    document.documentElement.classList.add('dark')
-  }
+  const now = new Date()
+  const hour = now.getHours()
+
+  // Dark mode between 6 PM (18) and 6 AM (6)
+  const shouldUseDark = hour >= 18 || hour < 6
+  applyDarkMode(shouldUseDark)
 })
 </script>
 
