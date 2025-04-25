@@ -13,16 +13,22 @@
         <li><router-link to="/Contact" class="hover:underline">Contact</router-link></li>
       </ul>
 
-      <button @click="toggleDarkMode" class="text-xl">
-        <span v-if="isDark">🌞</span>
-        <span v-else>🌙</span>
-      </button>
+      <div class="flex items-center space-x-4 md:space-x-0">
+        <!-- Dark Mode Toggle -->
+        <button @click="toggleDarkMode" class="text-xl text-black dark:text-white">
+          <span v-if="isDark"><Sun /></span>
+          <span v-else><Moon /></span>
+        </button>
 
-      <!-- Hamburger Icon -->
-      <button @click="toggleMenu" class="md:hidden text-xl focus:outline-none">
-        <span v-if="!isOpen">☰</span>
-        <span v-else>✕</span>
-      </button>
+        <!-- Hamburger Icon -->
+        <button
+          @click="toggleMenu"
+          class="md:hidden text-xl focus:outline-none text-black dark:text-white"
+        >
+          <span v-if="!isOpen">☰</span>
+          <span v-else>✕</span>
+        </button>
+      </div>
     </nav>
 
     <!-- Mobile Menu -->
@@ -52,6 +58,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import { Moon, Sun } from 'lucide-vue-next'
 
 const isOpen = ref(false)
 const isDark = ref(false)
