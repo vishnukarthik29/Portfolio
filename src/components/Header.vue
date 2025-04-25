@@ -25,8 +25,8 @@
           @click="toggleMenu"
           class="md:hidden text-xl focus:outline-none text-black dark:text-white"
         >
-          <span v-if="!isOpen">☰</span>
-          <span v-else>✕</span>
+          <span v-if="!isOpen"><Menu /></span>
+          <span v-else><X /></span>
         </button>
       </div>
     </nav>
@@ -58,7 +58,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { Moon, Sun } from 'lucide-vue-next'
+import { Moon, Sun, Menu, X } from 'lucide-vue-next'
 
 const isOpen = ref(false)
 const isDark = ref(false)
