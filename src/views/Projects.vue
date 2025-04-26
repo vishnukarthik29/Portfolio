@@ -109,6 +109,7 @@ const projects = [
       },
     ],
   },
+
   {
     title: 'Currency Converter',
     description: 'Convert currency in real time',
@@ -125,6 +126,17 @@ const projects = [
       {
         src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
         alt: 'Node.js',
+      },
+    ],
+  },
+  {
+    title: 'Http Server',
+    description: 'Run your own server, own your data—powered by Python.',
+    tech: ['Python'],
+    icons: [
+      {
+        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg',
+        alt: 'Python',
       },
     ],
   },
