@@ -140,5 +140,40 @@ const projects = [
       },
     ],
   },
+  {
+    title: 'Stock Price Prediction',
+    description: 'Predict future stock prices using Machine Learning with Python and Streamlit.',
+    tech: ['Python', 'Streamlit', 'MachineLearning'],
+    icons: [
+      {
+        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg',
+        alt: 'Python',
+      },
+      {
+        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/streamlit/streamlit-original.svg',
+        alt: 'Streamlit',
+      },
+    ],
+  },
+  {
+    title: 'Excel Merger',
+    description:
+      'Merge multiple Excel/CSV files right in the browser — drag & drop, preview, and download a single merged file. No server required.',
+    tech: ['HTML', 'CSS', 'JavaScript', 'SheetJS (xlsx)'],
+    icons: [
+      {
+        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg',
+        alt: 'HTML5',
+      },
+      {
+        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg',
+        alt: 'CSS3',
+      },
+      {
+        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
+        alt: 'JavaScript',
+      },
+    ],
+  },
 ]
 </script>

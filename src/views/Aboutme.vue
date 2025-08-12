@@ -88,12 +88,12 @@ export default {
     return {
       experiences: [
         {
-          title: 'Full-Stack Developer (Freelance) | Shomli Interiors',
-          duration: 'July 2024 - Jan 2025',
+          title: 'Full-Stack Developer  | Shomli Interiors',
+          duration: 'July 2024 - Present',
           points: [
-            'Developed an HRM and attendance system saving 15+ hours/week.',
-            'Built responsive UI with Vue.js and Bootstrap.',
-            'Deployed the app for real-time HR and staff access.',
+            'Developed a Human Resource and Project Management tool, saving over 40 hours per week.',
+            'Built a responsive UI using Vue.js and Bootstrap, with Node.js for the backend and MongoDB for the database.',
+            'Deployed the application for real-time HR and staff access.',
           ],
         },
         {

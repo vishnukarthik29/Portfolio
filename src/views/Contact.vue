@@ -33,6 +33,20 @@
           required
         />
         <input
+          v-model="form.country"
+          type="text"
+          placeholder="Your Country"
+          class="w-full p-3 rounded border dark:bg-gray-700 dark:text-white"
+          required
+        />
+        <input
+          v-model="form.phoneno"
+          type="number"
+          placeholder="Your Phone Number"
+          class="w-full p-3 rounded border dark:bg-gray-700 dark:text-white"
+          required
+        />
+        <input
           v-model="form.email"
           type="email"
           placeholder="Your Email"
@@ -66,6 +80,8 @@ export default {
       form: {
         name: '',
         email: '',
+        country: '',
+        phoneno: '',
         message: '',
       },
       sent: false,
@@ -79,6 +95,8 @@ export default {
       const params = {
         name: this.form.name,
         email: this.form.email,
+        country: this.form.country,
+        phoneno: this.form.phoneno,
         message: this.form.message,
       }
 
@@ -86,14 +104,16 @@ export default {
       const userID = 'HTFS9qX8vFp_ehgL2'
 
       emailjs
-        .send(serviceID, 'template_c3kzieu', params, userID)
-        .then(() => {
-          return emailjs.send(serviceID, 'template_vgsafat', params, userID)
-        })
+        .send(serviceID, 'template_nh8lxc9', params, userID)
+        // .then(() => {
+        //   return emailjs.send(serviceID, 'template_vgsafat', params, userID)
+        // })
         .then(() => {
           this.sent = true
           this.form.name = ''
           this.form.email = ''
+          this.form.country = ''
+          this.form.phoneno = ''
           this.form.message = ''
         })
         .catch((err) => {
