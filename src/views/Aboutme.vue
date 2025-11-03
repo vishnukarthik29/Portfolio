@@ -7,7 +7,7 @@
       <img
         src="../assets/images/vk.png"
         alt="Profile Photo"
-        class="mx-auto w-32 h-32 sm:w-40 sm:h-40 rounded-full shadow-lg border-4 border-white object-cover"
+        class="mx-auto w-40 h-40 sm:w-40 sm:h-40 rounded-full shadow-lg border-4 border-white object-cover"
       />
       <h1 class="text-2xl sm:text-3xl font-bold mt-4 text-black dark:text-white">
         Hi, I'm <span class="text-white dark:text-black">Vishnu Karthik</span>
