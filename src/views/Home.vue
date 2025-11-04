@@ -5,7 +5,8 @@
         Hey, I'm <span class="text-white dark:text-black">Vishnu Karthik</span>
       </h2>
       <p class="text-lg text-black dark:text-white mb-6">
-        A passionate developer crafting elegant web experiences.
+        A passionate developer crafting elegant web experiences with a touch of AI and ML
+        innovation.
       </p>
       <!-- Social Buttons -->
       <div class="flex flex-wrap justify-center gap-4 mb-6">

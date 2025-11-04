@@ -13,11 +13,12 @@
         Hi, I'm <span class="text-white dark:text-black">Vishnu Karthik</span>
       </h1>
       <p
-        class="text-black dark:text-white mt-4 max-w-3xl mx-auto leading-relaxed text-sm sm:text-base"
+        class="text-black dark:text-white mt-4 max-w-4xl mx-auto leading-relaxed text-lg font-style-italic sm:text-base"
       >
-        A passionate full-stack developer with hands-on experience in building scalable web
-        applications and real-time dashboards. Currently in my final semester of B.Sc Computer
-        Science, I'm constantly learning and building cool stuff with Vue.js, Node.js, and more.
+        A passionate full-stack developer and AI/ML enthusiast with hands-on experience in building
+        scalable web applications and real-time dashboards. Currently in my Purusing of M.S.
+        Computer Science, I'm constantly learning and building innovative solutions with Vue.js,
+        Node.js, Python, and Machine Learning technologies.
       </p>
       <div class="block sm:mt-6 sm:flex sm:justify-center">
         <h3
@@ -52,6 +53,36 @@
             <li v-for="(point, idx) in exp.points" :key="idx">{{ point }}</li>
           </ul>
         </div>
+      </div>
+    </div>
+
+    <div class="mb-12 px-4 sm:px-8">
+      <h2
+        class="text-xl sm:text-2xl font-semibold text-center mb-6 text-purple-700 dark:text-purple-400"
+      >
+        GitHub Contributions
+      </h2>
+      <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg max-w-4xl mx-auto">
+        <div class="w-full">
+          <!-- Light Mode (Green) -->
+          <img
+            src="https://ghchart.rshah.org/8B5CF6/vishnukarthik29"
+            alt="GitHub Contribution Chart"
+            class="w-full rounded-lg block dark:hidden transition-opacity duration-500"
+            style="image-rendering: crisp-edges"
+          />
+
+          <!-- Dark Mode (Blue) -->
+          <img
+            src="https://ghchart.rshah.org/0a4174/vishnukarthik29"
+            alt="GitHub Contribution Chart"
+            class="w-full rounded-lg hidden dark:block transition-opacity duration-500"
+            style="image-rendering: crisp-edges"
+          />
+        </div>
+        <p class="text-center text-sm text-gray-500 dark:text-gray-400 mt-4">
+          My GitHub contribution activity
+        </p>
       </div>
     </div>
 
@@ -91,7 +122,7 @@ export default {
           title: 'Full-Stack Developer  | Shomli Interiors',
           duration: 'July 2024 - Present',
           points: [
-            'Developed a Human Resource and Project Management tool, saving over 40 hours per week.',
+            'Developed a Human Resource and Project Management tool, saving over 120 hours for manual labour per week.',
             'Built a responsive UI using Vue.js and Bootstrap, with Node.js for the backend and MongoDB for the database.',
             'Deployed the application for real-time HR and staff access.',
           ],
@@ -130,6 +161,11 @@ export default {
           title: 'Bachelor of Science | Computer Science',
           duration: 'June 2021 - May 2024',
           description: 'Ramkrishna Mission - Vivekananda College, Chennai - C.G.P.A: 7.4',
+        },
+        {
+          title: 'Master of Science | Computer Science',
+          duration: 'Nov 2025 - Nov2027 (expected)',
+          description: 'Anna Univerisity - CDE',
         },
       ],
     }
