@@ -1,6 +1,6 @@
 <template>
   <section id="home" class="min-h-screen flex items-center justify-center text-center">
-    <div class="bg-white/30 dark:bg-black/30 backdrop-blur-md pt-15 shadow-xl">
+    <div class="backdrop-blur-md pt-15 shadow-xl">
       <h2 class="text-4xl font-bold mb-4 text-black dark:text-white">
         Hey, I'm <span class="text-white dark:text-black">Vishnu Karthik</span>
       </h2>

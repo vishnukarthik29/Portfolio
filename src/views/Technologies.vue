@@ -1,5 +1,5 @@
 <template>
-  <section class="p-6 md:p-8">
+  <section class="p-6 md:p-8 min-w-screen">
     <h2 class="text-3xl font-bold text-center mb-8 text-black dark:text-white">
       Technologies I Use
     </h2>
