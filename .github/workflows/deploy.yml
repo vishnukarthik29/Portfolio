@@ -3,7 +3,10 @@ name: Deploy Vue.js app to GitHub Pages
 on:
   push:
     branches:
-      - main # or master, depending on your branch name
+      - main # or master if your repo uses that
+
+permissions:
+  contents: write # 👈 This gives Actions permission to push
 
 jobs:
   build-and-deploy:
