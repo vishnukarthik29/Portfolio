@@ -20,6 +20,7 @@
         <a
           href="https://www.linkedin.com/in/vishnu-karthik-035260357"
           target="_blank"
+          aria-label="LinkediIn"
           class="flex items-center gap-2 px-4 py-2 bg-[#E8E8E8] dark:bg-gray-800 text-black dark:text-white rounded-lg shadow hover:bg-gray-100 transition"
         >
           <Linkedin class="w-5 h-5" />
@@ -27,12 +28,14 @@
         <a
           href="https://github.com/vishnukarthik29"
           target="_blank"
+          aria-label="Github"
           class="flex items-center gap-2 px-4 py-2 bg-[#E8E8E8] dark:bg-gray-800 text-black dark:text-white rounded-lg shadow hover:bg-gray-100 transition"
         >
           <Github class="w-5 h-5" />
         </a>
         <a
           href="mailto:vishnukarthik2912@gmail.com"
+          aria-label="Mail"
           class="flex items-center gap-2 px-4 py-2 bg-[#E8E8E8] dark:bg-gray-800 text-black dark:text-white rounded-lg shadow hover:bg-gray-100 transition"
         >
           <Mail class="w-5 h-5" />

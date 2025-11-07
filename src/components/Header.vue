@@ -15,15 +15,22 @@
 
       <div class="flex items-center space-x-4 md:space-x-0">
         <!-- Dark Mode Toggle -->
-        <button @click="toggleDarkMode" class="text-xl text-black dark:text-white">
+        <button
+          id="dark-mode-toggle"
+          @click="toggleDarkMode"
+          class="text-xl text-black dark:text-white"
+          :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
+        >
           <span v-if="isDark"><Sun /></span>
           <span v-else><Moon /></span>
         </button>
 
         <!-- Hamburger Icon -->
         <button
+          id="nav-menu-toggle"
           @click="toggleMenu"
           class="md:hidden text-xl focus:outline-none text-black dark:text-white"
+          aria-label="Toggle navigation menu"
         >
           <span v-if="!isOpen"><Menu /></span>
           <span v-else><X /></span>
