@@ -221,27 +221,6 @@ const projects = [
     ],
   },
   {
-    title: 'Excel Merger',
-    description:
-      'Merge multiple Excel/CSV files right in the browser — drag & drop, preview, and download a single merged file. No server required.',
-    tech: ['HTML', 'CSS', 'JavaScript', 'SheetJS'],
-    category: 'Web Development',
-    icons: [
-      {
-        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg',
-        alt: 'HTML5',
-      },
-      {
-        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg',
-        alt: 'CSS3',
-      },
-      {
-        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
-        alt: 'JavaScript',
-      },
-    ],
-  },
-  {
     title: 'Watershed Detection',
     description:
       'Advanced computer vision system for watershed segmentation and analysis using ML algorithms.',
