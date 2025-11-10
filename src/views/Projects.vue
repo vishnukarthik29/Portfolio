@@ -1,7 +1,5 @@
 <template>
-  <section
-    class="bg-white/30 dark:bg-black/30 backdrop-blur-md pt-20 shadow-xl p-5 sm:p-6 md:p-10 min-h-screen"
-  >
+  <section class="pt-20 p-5 sm:p-6 md:p-10 min-h-screen">
     <h2 class="pt-4 text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-white mb-8">
       My Projects
     </h2>

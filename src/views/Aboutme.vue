@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="bg-white/30 dark:bg-black/30 backdrop-blur-md pt-20 shadow-xl p-4 sm:p-6 md:p-10 min-h-screen"
-  >
+  <div class="pt-20 p-4 sm:p-6 md:p-10 min-h-screen">
     <!-- Introduction Section -->
     <div class="text-center px-4 sm:px-8 lg:px-16 mt-10 mb-14">
       <img
@@ -10,7 +8,7 @@
         class="mx-auto w-40 h-40 sm:w-40 sm:h-40 rounded-full shadow-lg border-4 border-white object-cover"
       />
       <h1 class="text-2xl sm:text-3xl font-bold mt-4 text-black dark:text-white">
-        Hi, I'm <span class="text-white dark:text-black">Vishnu Karthik</span>
+        Hi, I'm Vishnu Karthik
       </h1>
       <p
         class="text-black dark:text-white mt-4 max-w-4xl mx-auto leading-relaxed text-lg font-style-italic sm:text-base"
@@ -22,7 +20,7 @@
       </p>
       <div class="block sm:mt-6 sm:flex sm:justify-center">
         <h3
-          class="text-lg sm:text-xl md:text-3xl font-bold mt-6 text-white dark:text-black mx-auto"
+          class="text-lg sm:text-xl md:text-3xl font-bold mt-6 text-black dark:text-white mx-auto"
         >
           Growth doesn’t happen in the spotlight. It happens in silence, in every late-night
           compile.

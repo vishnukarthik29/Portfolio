@@ -1,16 +1,16 @@
 <template>
   <header class="fixed top-0 w-full z-50 backdrop-blur-sm bg-white/30 dark:bg-black/30 shadow-md">
     <nav class="max-w-screen mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="#home">
+      <router-link to="/">
         <h1 class="text-xl font-bold major-mono-display-regular text-black dark:text-white">VK</h1>
-      </a>
+      </router-link>
 
       <!-- Desktop Menu -->
       <ul class="hidden md:flex space-x-6 font-medium text-black dark:text-white">
-        <li><a href="#home" class="hover:underline">Home</a></li>
-        <li><a href="#about" class="hover:underline">About</a></li>
-        <li><a href="#projects" class="hover:underline">Projects</a></li>
-        <li><a href="#contact" class="hover:underline">Contact</a></li>
+        <li><router-link to="/" class="hover:underline">Home</router-link></li>
+        <li><router-link to="/about" class="hover:underline">About</router-link></li>
+        <li><router-link to="/Projects" class="hover:underline">Projects</router-link></li>
+        <li><router-link to="/Contact" class="hover:underline">Contact</router-link></li>
       </ul>
 
       <div class="flex items-center space-x-4 md:space-x-0">
@@ -45,9 +45,19 @@
         class="md:hidden flex flex-col items-center gap-4 py-4 font-medium backdrop-blur-sm bg-white/30 dark:bg-black/30 shadow-md text-black dark:text-white"
       >
         <li><router-link to="/" class="hover:underline" @click="closeMenu">Home</router-link></li>
-        <li><a href="#about" class="hover:underline">About</a></li>
-        <li><a href="#projects" class="hover:underline">Projects</a></li>
-        <li><a href="#contact" class="hover:underline">Contact</a></li>
+        <li>
+          <router-link to="/about" class="hover:underline" @click="closeMenu">About</router-link>
+        </li>
+        <li>
+          <router-link to="/Projects" class="hover:underline" @click="closeMenu"
+            >Projects</router-link
+          >
+        </li>
+        <li>
+          <router-link to="/Contact" class="hover:underline" @click="closeMenu"
+            >Contact</router-link
+          >
+        </li>
       </ul>
     </transition>
   </header>

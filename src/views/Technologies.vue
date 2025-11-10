@@ -1,10 +1,10 @@
 <template>
-  <section class="p-6 md:p-8 min-w-screen">
+  <section class="p-6 md:p-8">
     <h2 class="text-3xl font-bold text-center mb-8 text-black dark:text-white">
       Technologies I Use
     </h2>
 
-    <div class="space-y-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
       <div
         v-for="category in categories"
         :key="category.name"
@@ -15,16 +15,14 @@
           {{ category.name }}
         </h3>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-          <div
+        <div class="flex flex-wrap gap-3">
+          <img
             v-for="tech in category.technologies"
             :key="tech.name"
-            class="bg-[#E8E8E8] dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl transition duration-300 p-3 flex flex-col items-center justify-center text-center"
-          >
-            <img :src="tech.icon" :alt="tech.name" class="w-10 h-10 mb-2" />
-            <h4 class="font-semibold text-sm text-black dark:text-white">{{ tech.name }}</h4>
-            <p class="text-xs text-gray-600 dark:text-gray-400">{{ tech.caption }}</p>
-          </div>
+            :src="tech.badge"
+            :alt="tech.name"
+            class="h-7 transition-transform duration-200 hover:scale-105"
+          />
         </div>
       </div>
     </div>
@@ -39,38 +37,38 @@ const categories = [
     technologies: [
       {
         name: 'Vue.js',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg',
-        caption: 'Progressive framework',
+        badge:
+          'https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D',
       },
       {
         name: 'HTML5',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
-        caption: 'Markup language',
+        badge:
+          'https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white',
       },
       {
         name: 'CSS3',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
-        caption: 'Style sheet language',
+        badge:
+          'https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white',
       },
       {
         name: 'JavaScript',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-        caption: 'Frontend scripting',
+        badge:
+          'https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black',
       },
       {
         name: 'Tailwind CSS',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
-        caption: 'Utility-first CSS',
+        badge:
+          'https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white',
       },
       {
         name: 'Bootstrap',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
-        caption: 'CSS toolkit',
+        badge:
+          'https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white',
       },
       {
         name: 'Vite',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg',
-        caption: 'Build tool',
+        badge:
+          'https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white',
       },
     ],
   },
@@ -80,33 +78,33 @@ const categories = [
     technologies: [
       {
         name: 'Node.js',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
-        caption: 'JavaScript runtime',
+        badge:
+          'https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white',
       },
       {
         name: 'Express.js',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
-        caption: 'Node.js framework',
+        badge:
+          'https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white',
       },
       {
         name: 'Python',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
-        caption: 'General-purpose',
+        badge:
+          'https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white',
       },
       {
         name: 'C++',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg',
-        caption: 'Programming language',
+        badge:
+          'https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white',
       },
       {
         name: 'Nginx',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg',
-        caption: 'Web server',
+        badge:
+          'https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white',
       },
       {
         name: 'XAMPP',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg',
-        caption: 'Local server stack',
+        badge:
+          'https://img.shields.io/badge/XAMPP-FB7A24?style=for-the-badge&logo=xampp&logoColor=white',
       },
     ],
   },
@@ -116,13 +114,13 @@ const categories = [
     technologies: [
       {
         name: 'MySQL',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
-        caption: 'Relational database',
+        badge:
+          'https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white',
       },
       {
         name: 'MongoDB',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
-        caption: 'NoSQL database',
+        badge:
+          'https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white',
       },
     ],
   },
@@ -132,28 +130,28 @@ const categories = [
     technologies: [
       {
         name: 'NumPy',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg',
-        caption: 'Numerical computing',
+        badge:
+          'https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white',
       },
       {
         name: 'Pandas',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg',
-        caption: 'Data manipulation',
+        badge:
+          'https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white',
       },
       {
         name: 'Matplotlib',
-        icon: 'https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg',
-        caption: 'Plotting library',
+        badge:
+          'https://img.shields.io/badge/Matplotlib-11557c?style=for-the-badge&logo=python&logoColor=white',
       },
       {
         name: 'Jupyter',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg',
-        caption: 'Interactive computing',
+        badge:
+          'https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white',
       },
       {
         name: 'Power BI',
-        icon: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg',
-        caption: 'Data visualization',
+        badge:
+          'https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black',
       },
     ],
   },
@@ -163,13 +161,13 @@ const categories = [
     technologies: [
       {
         name: 'Cheerio',
-        icon: 'https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/cheerio.svg',
-        caption: 'HTML parsing',
+        badge:
+          'https://img.shields.io/badge/Cheerio-E88C00?style=for-the-badge&logo=javascript&logoColor=white',
       },
       {
         name: 'Puppeteer',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/puppeteer/puppeteer-original.svg',
-        caption: 'Chrome automation',
+        badge:
+          'https://img.shields.io/badge/Puppeteer-40B5A4?style=for-the-badge&logo=puppeteer&logoColor=white',
       },
     ],
   },
@@ -179,23 +177,23 @@ const categories = [
     technologies: [
       {
         name: 'Git',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
-        caption: 'Version control',
+        badge:
+          'https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white',
       },
       {
         name: 'GitHub',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
-        caption: 'Code hosting',
+        badge:
+          'https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white',
       },
       {
         name: 'VS Code',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg',
-        caption: 'Code editor',
+        badge:
+          'https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white',
       },
       {
         name: 'npm',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg',
-        caption: 'Package manager',
+        badge:
+          'https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white',
       },
     ],
   },

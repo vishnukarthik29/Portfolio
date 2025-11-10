@@ -2,7 +2,6 @@
   <div
     class="min-h-screen relative overflow-hidden bg-gradient-to-br from-white to-gray-100 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300"
     @mousemove="handleMouseMove"
-    ref="containerRef"
   >
     <!-- Interactive Canvas -->
     <canvas ref="canvasRef" class="absolute inset-0 pointer-events-none"></canvas>
@@ -24,13 +23,12 @@ import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 
 const canvasRef = ref(null)
-const containerRef = ref(null)
 const mousePos = ref({ x: 0, y: 0 })
 const isDark = ref(false)
 let animationFrameId = null
 
 const handleMouseMove = (e) => {
-  mousePos.value = { x: e.clientX, y: e.clientY + window.scrollY }
+  mousePos.value = { x: e.clientX, y: e.clientY }
 }
 
 const animate = (canvas, ctx) => {
@@ -67,33 +65,22 @@ const animate = (canvas, ctx) => {
 
 const initCanvas = () => {
   const canvas = canvasRef.value
-  const container = containerRef.value
-  if (!canvas || !container) return
+  if (!canvas) return
 
   const ctx = canvas.getContext('2d')
 
   const resizeCanvas = () => {
-    // Set canvas size to match the container's full scroll height
     canvas.width = window.innerWidth
-    canvas.height = Math.max(container.scrollHeight, window.innerHeight)
+    canvas.height = window.innerHeight
   }
 
   resizeCanvas()
-
-  // Resize on window resize
   window.addEventListener('resize', resizeCanvas)
-
-  // Resize when content changes (using ResizeObserver for better detection)
-  const resizeObserver = new ResizeObserver(() => {
-    resizeCanvas()
-  })
-  resizeObserver.observe(container)
 
   animate(canvas, ctx)
 
   return () => {
     window.removeEventListener('resize', resizeCanvas)
-    resizeObserver.disconnect()
     if (animationFrameId) {
       cancelAnimationFrame(animationFrameId)
     }

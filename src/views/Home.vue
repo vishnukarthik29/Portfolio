@@ -1,9 +1,7 @@
 <template>
   <section id="home" class="min-h-screen flex items-center justify-center text-center">
-    <div class="backdrop-blur-md pt-15 shadow-xl">
-      <h2 class="text-4xl font-bold mb-4 text-black dark:text-white">
-        Hey, I'm <span class="text-white dark:text-black">Vishnu Karthik</span>
-      </h2>
+    <div class="pt-15">
+      <h2 class="text-4xl font-bold mb-4 text-black dark:text-white">Hey, I'm Vishnu Karthik</h2>
       <p class="text-lg text-black dark:text-white mb-6">
         A passionate developer crafting elegant web experiences with a touch of AI and ML
         innovation.
@@ -54,6 +52,15 @@
       <div class="p-4">
         <Technologies />
       </div>
+      <div id="about">
+        <Aboutme />
+      </div>
+      <div id="projects">
+        <Projects />
+      </div>
+      <div id="contact">
+        <Contact />
+      </div>
     </div>
   </section>
 </template>
@@ -61,6 +68,9 @@
 <script setup>
 import Time from '../views/Time.vue'
 import Technologies from '../views/Technologies.vue'
+import Aboutme from './Aboutme.vue'
+import Projects from './Projects.vue'
+import Contact from './Contact.vue'
 const resumeUrl = `${import.meta.env.BASE_URL}vishnukarthik.pdf`
 // Lucide Icons
 import { Github, Linkedin, Mail, Instagram, Download } from 'lucide-vue-next'
