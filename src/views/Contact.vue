@@ -111,7 +111,7 @@
               <textarea
                 v-model="form.message"
                 placeholder="Your Message"
-                class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white h-32 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition resize-none"
+                class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition resize-none"
                 required
               ></textarea>
               <button

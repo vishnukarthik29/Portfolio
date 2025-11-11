@@ -4,10 +4,9 @@
   >
     <p class="text-black dark:text-white inline-block">
       &copy; 2025 Vishnu Karthik.
-      <span
-        class="text-black dark:text-white border-r-2 border-black dark:border-white animate-cursor ml-2"
-      >
-        {{ displayedText }}
+      <span class="text-black dark:text-white ml-2">
+        {{ displayedText
+        }}<span class="animate-cursor border-r-2 border-black dark:border-white">|</span>
       </span>
     </p>
   </footer>
@@ -25,37 +24,41 @@ const phrases = [
 ]
 
 const displayedText = ref('')
-let index = 0
+let phraseIndex = 0
 let charIndex = 0
-let typing = true
+let isDeleting = false
 
-function typeEffect() {
-  const current = phrases[index]
+function typeWriter() {
+  const currentPhrase = phrases[phraseIndex]
 
-  if (typing) {
-    if (charIndex < current.length) {
-      displayedText.value += current.charAt(charIndex)
-      charIndex++
-      setTimeout(typeEffect, 80)
-    } else {
-      typing = false
-      setTimeout(typeEffect, 2000) // pause before deleting
+  if (isDeleting) {
+    // Delete character
+    displayedText.value = currentPhrase.substring(0, charIndex - 1)
+    charIndex--
+
+    if (charIndex === 0) {
+      isDeleting = false
+      phraseIndex = (phraseIndex + 1) % phrases.length
+      setTimeout(typeWriter, 500) // Pause before typing next phrase
+      return
     }
+    setTimeout(typeWriter, 50) // Faster deletion
   } else {
-    if (charIndex > 0) {
-      displayedText.value = current.substring(0, charIndex - 1)
-      charIndex--
-      setTimeout(typeEffect, 40)
-    } else {
-      typing = true
-      index = (index + 1) % phrases.length
-      setTimeout(typeEffect, 300)
+    // Type character
+    displayedText.value = currentPhrase.substring(0, charIndex + 1)
+    charIndex++
+
+    if (charIndex === currentPhrase.length) {
+      isDeleting = true
+      setTimeout(typeWriter, 2000) // Pause at end of phrase
+      return
     }
+    setTimeout(typeWriter, 100) // Typing speed
   }
 }
 
 onMounted(() => {
-  typeEffect()
+  setTimeout(typeWriter, 500) // Initial delay
 })
 </script>
 
@@ -65,7 +68,6 @@ onMounted(() => {
     opacity: 0;
   }
 }
-
 .animate-cursor {
   animation: blink 0.8s step-end infinite;
 }
