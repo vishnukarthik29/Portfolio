@@ -3,7 +3,7 @@
     class="text-center py-6 backdrop-blur bg-white/30 dark:bg-black/30 shadow-md transition-all duration-300"
   >
     <p class="text-black dark:text-white inline-block">
-      &copy; 2025 Vishnu Karthik.
+      &copy; 2025 VishnuKarthik.
       <span class="text-black dark:text-white ml-2">
         {{ displayedText
         }}<span class="animate-cursor border-r-2 border-black dark:border-white">|</span>
