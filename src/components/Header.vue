@@ -1,5 +1,5 @@
 <template>
-  <header class="fixed top-0 w-full z-50 backdrop-blur-sm bg-white/30 dark:bg-black/30 shadow-md">
+  <header class="fixed top-0 w-full z-50 backdrop-blur-xl bg-white/30 dark:bg-black/30 shadow-md">
     <nav class="max-w-screen mx-auto px-4 py-3 flex items-center justify-between">
       <a href="#home">
         <h1 class="text-xl font-bold major-mono-display-regular text-black dark:text-white">VK</h1>
@@ -42,7 +42,7 @@
     <transition name="fade">
       <ul
         v-if="isOpen"
-        class="md:hidden flex flex-col items-center gap-4 py-4 font-medium backdrop-blur-sm bg-white/30 dark:bg-black/30 shadow-md text-black dark:text-white"
+        class="md:hidden flex flex-col items-center gap-4 py-4 font-medium backdrop-blur-xl bg-white/30 dark:bg-black/30 shadow-md text-black dark:text-white"
       >
         <li><router-link to="/" class="hover:underline" @click="closeMenu">Home</router-link></li>
         <li><a href="#about" class="hover:underline">About</a></li>
