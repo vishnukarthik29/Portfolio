@@ -91,11 +91,11 @@
       >
         Education
       </h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
         <div
           v-for="(edu, index) in education"
           :key="index"
-          class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg transition-transform hover:scale-105"
+          class="bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-lg transition-transform hover:scale-105"
         >
           <h3 class="text-lg sm:text-xl font-bold text-gray-800 dark:text-white">
             {{ edu.title }}
@@ -146,25 +146,25 @@ export default {
       ],
       education: [
         {
-          title: 'Secondary Education (Class 10)',
-          duration: 'June 2018 - May 2019',
-          description: 'Santhome Higher Secondary School, Chennai - 70%',
-        },
-        {
-          title: 'Higher Secondary Education (Class 12)',
-          duration: 'June 2020 - May 2021',
-          description: 'Santhome Higher Secondary School, Chennai - 77%',
+          title: 'Master of Science | Computer Science',
+          duration: 'Nov 2025 - Nov2027 (expected)',
+          description: 'Anna Univerisity - CDE',
         },
         {
           title: 'Bachelor of Science | Computer Science',
           duration: 'June 2021 - May 2024',
           description: 'Ramkrishna Mission - Vivekananda College, Chennai - C.G.P.A: 7.4',
         },
-        {
-          title: 'Master of Science | Computer Science',
-          duration: 'Nov 2025 - Nov2027 (expected)',
-          description: 'Anna Univerisity - CDE',
-        },
+        // {
+        //   title: 'Higher Secondary Education (Class 12)',
+        //   duration: 'June 2020 - May 2021',
+        //   description: 'Santhome Higher Secondary School, Chennai - 77%',
+        // },
+        // {
+        //   title: 'Secondary Education (Class 10)',
+        //   duration: 'June 2018 - May 2019',
+        //   description: 'Santhome Higher Secondary School, Chennai - 70%',
+        // },
       ],
     }
   },
