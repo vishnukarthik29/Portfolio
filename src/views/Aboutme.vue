@@ -35,7 +35,7 @@
       >
         Experience
       </h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
         <div
           v-for="(exp, index) in experiences"
           :key="index"
@@ -117,29 +117,30 @@ export default {
     return {
       experiences: [
         {
-          title: 'Full-Stack Developer  | Shomli Interiors',
-          duration: 'July 2024 - Present',
+          title: 'Product Engineer  | Shomli Interiors',
+          duration: 'May 2024 - Present',
           points: [
-            'Developed a Human Resource and Project Management tool, saving over 120 hours for manual labour per week.',
-            'Built a responsive UI using Vue.js and Bootstrap, with Node.js for the backend and MongoDB for the database.',
-            'Deployed the application for real-time HR and staff access.',
+            'Built and deployed an end-to-end HR, operations, and finance workflow platform (HRM, geo-attendance,purchase requests, AR dashboard, estimation & execution tracking), used daily by 100+ employees, saving 20+hours/week and improving cross-team decision-making.',
+            'Reduced proxy attendance incidents by 80% by deploying a geo-based attendance system with locationvalidation, improving on-site compliance across active sites.',
+            'Built an end-to-end Purchase Request workflow enabling operations teams to raise material requests andautomatically notify accounts via email, streamlining Purchase Order creation in Tally and reducing manualcoordination.',
+            'Developed an AR (Accounts Receivable) Dashboard providing real-time visibility into financial and operational metricsfor management.',
           ],
         },
+        // {
+        //   title: 'Full-Stack Developer (Freelance) | Shomli Interiors',
+        //   duration: 'May 2024 - June 2024',
+        //   points: [
+        //     'Built a real-time dashboard for the CEO to monitor site updates.',
+        //     'Designed intuitive UI to enhance operational visibility.',
+        //     'Delivered a modular backend using RESTful APIs for extensibility.',
+        //   ],
+        // },
         {
-          title: 'Full-Stack Developer (Freelance) | Shomli Interiors',
-          duration: 'May 2024 - June 2024',
-          points: [
-            'Built a real-time dashboard for the CEO to monitor site updates.',
-            'Designed intuitive UI to enhance operational visibility.',
-            'Delivered a modular backend using RESTful APIs for extensibility.',
-          ],
-        },
-        {
-          title: 'Assistant Software Developer (Intern) | Nelly Software',
+          title: 'Software Developer (Intern) | Nelly Software',
           duration: 'Dec 2023 - Feb 2024',
           points: [
-            'Contributed to frontend development using HTML/CSS/JS, improving UI responsiveness.',
-            'Collaborated with senior developers to debug, test, and optimize code.',
+            'Contributed to frontend development using HTML, CSS, and JavaScript, improving UI responsiveness and cross-browsercompatibility.',
+            'Collaborated with senior developers on debugging, testing, and client-facing feature delivery.',
             'Supported in code implementation and presentation to the client.',
           ],
         },
