@@ -9,7 +9,7 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Portfolio', link: '/Portfolio/' },
+      { text: 'Portfolio', link: 'https://vishnukarthik29.github.io/Portfolio/' },
       // { text: 'Blog', link: '/blog/' },
     ],
 
