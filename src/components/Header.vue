@@ -11,6 +11,7 @@
         <li><a href="#about" class="hover:underline">About</a></li>
         <li><a href="#projects" class="hover:underline">Projects</a></li>
         <li><a href="#contact" class="hover:underline">Contact</a></li>
+        <li><a href="/Portfolio/blog/" class="hover:underline">Blog</a></li>
       </ul>
 
       <div class="flex items-center space-x-4 md:space-x-0">
@@ -48,6 +49,7 @@
         <li><a href="#about" class="hover:underline">About</a></li>
         <li><a href="#projects" class="hover:underline">Projects</a></li>
         <li><a href="#contact" class="hover:underline">Contact</a></li>
+        <li><a href="/Portfolio/blog/" class="hover:underline">Blog</a></li>
       </ul>
     </transition>
   </header>
