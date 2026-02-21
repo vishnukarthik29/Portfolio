@@ -11,7 +11,7 @@ hero:
       link: /nvidia
     - theme: alt
       text: Back to Portfolio
-      link: ../
+      link: /Portfolio/
 ---
 
 <div class="vp-doc">
