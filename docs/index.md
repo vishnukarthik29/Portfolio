@@ -9,7 +9,9 @@ hero:
     - theme: brand
       text: Read Latest Essay
       link: /nvidia
-<a href="https://vishnukarthik29.github.io/Portfolio/" class="vp-button alt"> Back to Portfolio</a>
+    - theme: alt
+      text: Back to Portfolio
+      link: https://vishnukarthik29.github.io/Portfolio/
 ---
 
 <div class="vp-doc">
