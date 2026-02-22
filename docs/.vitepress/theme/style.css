@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+.VPNavBarTitle .title {
+  font-family: 'Major Mono Display', monospace;
+  letter-spacing: 2px;
+  font-weight: 400;
+  text-transform: uppercase;
+}

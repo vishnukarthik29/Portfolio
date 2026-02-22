@@ -36,12 +36,19 @@
             <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Contact Info</h3>
             <div class="space-y-4">
               <div class="flex items-center text-gray-700 dark:text-gray-300">
-                <Mail class="w-5 h-5 mr-3 text-blue-600 dark:text-blue-400" />
-                <span class="text-sm">vishnukarthik2912@gmail.com</span>
+                <a
+                  href="mailto:vishnukarthik2912@gmail.com"
+                  class="flex items-center text-sm hover:underline"
+                >
+                  <Mail class="w-5 h-5 mr-3 text-blue-600 dark:text-blue-400" />
+                  <span>vishnukarthik2912@gmail.com</span>
+                </a>
               </div>
               <div class="flex items-center text-gray-700 dark:text-gray-300">
-                <Phone class="w-5 h-5 mr-3 text-blue-600 dark:text-blue-400" />
-                <span class="text-sm">+91 8668131033</span>
+                <a href="tel:+918668131033" class="flex items-center text-sm hover:underline">
+                  <Phone class="w-5 h-5 mr-3 text-blue-600 dark:text-blue-400" />
+                  <span>+91 8668131033</span>
+                </a>
               </div>
               <div class="flex items-center text-gray-700 dark:text-gray-300">
                 <MapPin class="w-5 h-5 mr-3 text-blue-600 dark:text-blue-400" />
@@ -87,13 +94,13 @@
                 class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
                 required
               />
-              <input
+              <!-- <input
                 v-model="form.country"
                 type="text"
                 placeholder="Your Country"
                 class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
                 required
-              />
+              /> -->
               <input
                 v-model="form.phoneno"
                 type="tel"
@@ -234,7 +241,7 @@ export default {
       const params = {
         name: form.value.name,
         email: form.value.email,
-        country: form.value.country,
+        // country: form.value.country,
         phoneno: form.value.phoneno,
         message: form.value.message,
       }
@@ -251,7 +258,7 @@ export default {
           sent.value = true
           form.value.name = ''
           form.value.email = ''
-          form.value.country = ''
+          // form.value.country = ''
           form.value.phoneno = ''
           form.value.message = ''
 

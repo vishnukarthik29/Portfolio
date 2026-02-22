@@ -2,10 +2,10 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'VISHNUKARTHIK',
+  title: 'VK',
   description: 'Portfolio Blog',
   base: '/Portfolio/blog/',
-
+  head: [['link', { rel: 'icon', href: '/Portfolio/blog/VKP.png' }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
