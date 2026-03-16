@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: Read Latest Essay
-      link: /pentagon
+      link: /ai-agent-architecture
     - theme: alt
       text: Back to Portfolio
       link: https://vishnukarthik29.github.io/Portfolio/
@@ -31,6 +31,8 @@ This archive exists to trace those fault lines.
 
 ## Latest Writing
 
+- **[The Architecture of an Autonomous AI Agent](/ai-agent-architecture)**  
+  Planner, Executor, Memory — the three-layer pattern behind every serious agentic system.
 - **[The Pentagon Went to War with Anthropic. What's Really at Stake?](/pentagon)**  
   A $200M contract, a supply chain risk designation, and the question no one wants to answer.
 - **[Anthropic Isn't Building a Chatbot. It's Building Infrastructure.](/anthropic)**  
