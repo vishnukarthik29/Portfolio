@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: Read Latest Essay
-      link: /ai-agent-architecture
+      link: /openclaw
     - theme: alt
       text: Back to Portfolio
       link: https://vishnukarthik29.github.io/Portfolio/
@@ -31,6 +31,8 @@ This archive exists to trace those fault lines.
 
 ## Latest Writing
 
+- **[OpenClaw Is What Happens When Personal AI Escapes the Walled Garden](/openclaw)**  
+  A lobster, your machine, and the structural reason every major AI lab failed to build this.
 - **[The Architecture of an Autonomous AI Agent](/ai-agent-architecture)**  
   Planner, Executor, Memory — the three-layer pattern behind every serious agentic system.
 - **[The Pentagon Went to War with Anthropic. What's Really at Stake?](/pentagon)**  
