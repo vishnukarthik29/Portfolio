@@ -1,6 +1,6 @@
 ---
 title: "Anthropic Isn't Building a Chatbot. It's Building Infrastructure."
-date: 2026-03-16
+date: 2026-03-06
 description: 'Constitutional AI, 1M context, and the quiet construction of an enterprise moat.'
 ---
 

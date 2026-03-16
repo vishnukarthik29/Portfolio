@@ -1,6 +1,6 @@
 ---
 title: "The Architecture of an Autonomous AI Agent"
-date: 2026-03-16
+date: 2026-03-01
 description: 'Planner, Executor, Memory — the three-layer pattern behind every serious agentic system.'
 ---
 

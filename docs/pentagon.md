@@ -1,6 +1,6 @@
 ---
 title: "The Pentagon Went to War with Anthropic. What's Really at Stake?"
-date: 2026-03-16
+date: 2026-03-11
 description: 'A $200M contract, a supply chain risk designation, and the question no one wants to answer.'
 ---
 
