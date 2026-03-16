@@ -32,12 +32,12 @@ function getSidebarItems() {
 export default defineConfig({
   title: 'VK',
   description: 'Portfolio Blog',
-  base: '/Portfolio/blog/',
-  head: [['link', { rel: 'icon', href: '/Portfolio/blog/VKP.png' }]],
+  base: '/blog/',
+  head: [['link', { rel: 'icon', href: '/blog/VKP.png' }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Portfolio', link: 'https://vishnukarthik29.github.io/Portfolio/' },
+      { text: 'Portfolio', link: 'https://vishnukarthik.me/' },
       // { text: 'Blog', link: '/blog/' },
     ],
 
