@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: Read Latest Essay
-      link: /anthropic
+      link: /pentagon
     - theme: alt
       text: Back to Portfolio
       link: https://vishnukarthik29.github.io/Portfolio/
@@ -31,6 +31,8 @@ This archive exists to trace those fault lines.
 
 ## Latest Writing
 
+- **[The Pentagon Went to War with Anthropic. What's Really at Stake?](/pentagon)**  
+  A $200M contract, a supply chain risk designation, and the question no one wants to answer.
 - **[Anthropic Isn't Building a Chatbot. It's Building Infrastructure.](/anthropic)**  
   Constitutional AI, 1M context, and the quiet construction of an enterprise moat.
 - **[ASML's Moat Isn't Gone. But It's No Longer Untouchable.](/asml)**  
