@@ -1,4 +1,32 @@
 import { defineConfig } from 'vitepress'
+import fs from 'fs'
+import path from 'path'
+
+// Auto-generate sidebar from markdown files in docs/
+function getSidebarItems() {
+  const docsDir = path.resolve(__dirname, '..')
+  const files = fs.readdirSync(docsDir)
+
+  return files
+    .filter(f => f.endsWith('.md') && f !== 'index.md')
+    .map(f => {
+      const filePath = path.join(docsDir, f)
+      const content = fs.readFileSync(filePath, 'utf-8')
+
+      // Extract title from frontmatter or first h1
+      const fmTitle = content.match(/^title:\s*["']?(.+?)["']?\s*$/m)
+      const h1Title = content.match(/^#\s+(.+)$/m)
+      const text = fmTitle ? fmTitle[1] : h1Title ? h1Title[1] : f.replace('.md', '')
+
+      // Extract date from frontmatter for sorting
+      const dateMatch = content.match(/^date:\s*(.+)$/m)
+      const date = dateMatch ? new Date(dateMatch[1]) : new Date(0)
+
+      return { text, link: '/' + f.replace('.md', ''), date }
+    })
+    .sort((a, b) => b.date - a.date) // newest first
+    .map(({ text, link }) => ({ text, link }))
+}
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -16,10 +44,7 @@ export default defineConfig({
     sidebar: [
       {
         text: 'Blog',
-        items: [
-          { text: "NVIDIA Isn't Waiting for the Future. It's Shipping It.", link: '/nvidia' },
-          { text: "ASML's Moat Isn't Gone. But It's No Longer Untouchable.", link: '/asml' },
-        ],
+        items: getSidebarItems(),
       },
     ],
 
