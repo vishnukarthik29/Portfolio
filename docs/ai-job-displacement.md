@@ -1,7 +1,7 @@
 ---
 title: "The White-Collar Reckoning: AI, Automation, and the Jobs That Won't Come Back"
 date: 2026-03-19
-description: 'Automation isn't taking the factory floor anymore. It's taking the office. And the economics of what comes next are far from settled.'
+description: "Automation is not taking the factory floor anymore. It is taking the office. And the economics of what comes next are far from settled."
 ---
 
 # The White-Collar Reckoning: AI, Automation, and the Jobs That Won't Come Back
