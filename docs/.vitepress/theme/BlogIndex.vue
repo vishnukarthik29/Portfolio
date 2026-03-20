@@ -10,7 +10,7 @@
         <p class="blog-subtitle">Systems. Capital. Structural Power.</p>
         <p class="blog-tagline">Essays dissecting markets, software, and the invisible leverage behind durable advantage.</p>
         <div class="blog-hero-actions">
-          <a href="/blog/openclaw.html" class="btn-primary">Read Latest Essay</a>
+          <a :href="`/blog/${latestSlug}.html`" class="btn-primary">Read Latest Essay</a>
           <a href="https://vishnukarthik.me/" class="btn-secondary">Back to Portfolio</a>
         </div>
       </div>
@@ -52,20 +52,26 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { data as rawPosts } from './posts.data.js'
 
 const canvasRef = ref(null)
 const mouse = ref({ x: -999, y: -999 })
 let raf = null
 
-const posts = [
-  { slug: 'openclaw',             date: 'Mar 16, 2026', title: 'OpenClaw Is What Happens When Personal AI Escapes the Walled Garden',  desc: 'A lobster, your machine, and the structural reason every major AI lab failed to build this.' },
-  { slug: 'pentagon',             date: 'Mar 11, 2026', title: "The Pentagon Went to War with Anthropic. What's Really at Stake?",       desc: 'A $200M contract, a supply chain risk designation, and the question no one wants to answer.' },
-  { slug: 'anthropic',            date: 'Mar 06, 2026', title: "Anthropic Isn't Building a Chatbot. It's Building Infrastructure.",      desc: 'Constitutional AI, 1M context, and the quiet construction of an enterprise moat.' },
-  { slug: 'ai-agent-architecture', date: 'Mar 01, 2026', title: 'The Architecture of an Autonomous AI Agent',                           desc: 'Planner, Executor, Memory — the three-layer pattern behind every serious agentic system.' },
-  { slug: 'nvidia',               date: 'Jan 22, 2026', title: "NVIDIA Isn't Waiting for the Future. It's Shipping It.",                 desc: 'Rubin is in production.' },
-  { slug: 'asml',                 date: 'Jan 21, 2026', title: "ASML's Moat Isn't Gone. But It's No Longer Untouchable.",               desc: 'On lithography dominance, China exposure, and erosion of structural invincibility.' },
-]
+// Format date e.g. 2026-03-19 → "Mar 19, 2026"
+function formatDate(dateStr) {
+  if (!dateStr) return ''
+  const d = new Date(dateStr)
+  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+}
+
+const posts = computed(() =>
+  rawPosts.map(p => ({ ...p, date: formatDate(p.date) }))
+)
+
+// Latest post slug drives the hero CTA button dynamically
+const latestSlug = computed(() => posts.value[0]?.slug || '')
 
 const onMouseMove = (e) => {
   mouse.value = { x: e.clientX, y: e.clientY }
