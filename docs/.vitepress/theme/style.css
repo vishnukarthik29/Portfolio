@@ -6,3 +6,8 @@
   font-weight: 400;
   text-transform: uppercase;
 }
+
+/* Hide sidebar on the blog home page (layout: page) */
+.VPPage .VPSidebar {
+  display: none !important;
+}
