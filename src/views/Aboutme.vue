@@ -148,7 +148,7 @@ export default {
       education: [
         {
           title: 'Master of Science | Computer Science',
-          duration: 'Nov 2025 - Nov2027 (expected)',
+          duration: 'Nov 2025 - Nov 2027',
           description: 'Anna Univerisity - CDE',
         },
         {
