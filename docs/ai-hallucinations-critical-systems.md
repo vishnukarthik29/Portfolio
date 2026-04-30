@@ -1,7 +1,7 @@
 ---
 title: "When AI Lies to the System That Can't Afford to Be Wrong"
 date: 2026-04-30
-description: 'Hallucinations aren't a bug to be patched. In critical systems, they're a structural failure waiting for the right conditions.'
+description: "Hallucinations aren't a bug to be patched. In critical systems, they're a structural failure waiting for the right conditions."
 ---
 
 # When AI Lies to the System That Can't Afford to Be Wrong
