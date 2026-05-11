@@ -30,11 +30,6 @@ jobs:
       - name: Build VitePress blog
         run: npm run docs:build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
       - name: Copy RSS feed into blog output
         run: |
           cp docs/.vitepress/dist/feed.xml dist/blog/feed.xml
