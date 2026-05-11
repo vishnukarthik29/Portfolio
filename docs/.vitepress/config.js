@@ -15,8 +15,8 @@ function getSidebarItems() {
   const files = fs.readdirSync(docsDir)
 
   return files
-    .filter(f => f.endsWith('.md') && f !== 'index.md')
-    .map(f => {
+    .filter((f) => f.endsWith('.md') && f !== 'index.md')
+    .map((f) => {
       const filePath = path.join(docsDir, f)
       const content = fs.readFileSync(filePath, 'utf-8')
       const fmTitle = content.match(/^title:\s*["']?(.+?)["']?\s*$/m)
@@ -45,22 +45,27 @@ function extractExcerpt(content, maxLen = 200) {
   const withoutFm = content.replace(/^---[\s\S]*?---\n/, '')
   const firstPara = withoutFm
     .split(/\n\n/)
-    .find(p => p.trim() && !p.startsWith('#') && !p.startsWith('---'))
+    .find((p) => p.trim() && !p.startsWith('#') && !p.startsWith('---'))
   if (!firstPara) return ''
-  return firstPara
-    .replace(/[#*`>\[\]]/g, '')
-    .replace(/\s+/g, ' ')
-    .trim()
-    .slice(0, maxLen) + (firstPara.length > maxLen ? '…' : '')
+  return (
+    firstPara
+      .replace(/[#*`>\[\]]/g, '')
+      .replace(/\s+/g, ' ')
+      .trim()
+      .slice(0, maxLen) + (firstPara.length > maxLen ? '…' : '')
+  )
 }
 
 function generateRSS(posts) {
-  const items = posts.map(p => {
-    const pubDate = p.date ? new Date(p.date).toUTCString() : new Date().toUTCString()
-    const link = `${SITE_URL}${BLOG_BASE}/${p.slug}/`
-    const desc = (p.description || p.excerpt)
-      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-    return `
+  const items = posts
+    .map((p) => {
+      const pubDate = p.date ? new Date(p.date).toUTCString() : new Date().toUTCString()
+      const link = `${SITE_URL}${BLOG_BASE}/${p.slug}`
+      const desc = (p.description || p.excerpt)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+      return `
     <item>
       <title><![CDATA[${p.title}]]></title>
       <link>${link}</link>
@@ -69,7 +74,8 @@ function generateRSS(posts) {
       <pubDate>${pubDate}</pubDate>
       <author>contact@vishnukarthik.me (${AUTHOR})</author>
     </item>`
-  }).join('')
+    })
+    .join('')
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -87,9 +93,9 @@ function generateRSS(posts) {
 
 function getPosts() {
   const docsDir = path.resolve(__dirname, '..')
-  const files = fs.readdirSync(docsDir).filter(f => f.endsWith('.md') && f !== 'index.md')
+  const files = fs.readdirSync(docsDir).filter((f) => f.endsWith('.md') && f !== 'index.md')
   return files
-    .map(f => {
+    .map((f) => {
       const content = fs.readFileSync(path.join(docsDir, f), 'utf-8')
       const fm = parseFrontmatter(content)
       return {
@@ -100,7 +106,7 @@ function getPosts() {
         excerpt: extractExcerpt(content),
       }
     })
-    .filter(p => p.date)
+    .filter((p) => p.date)
     .sort((a, b) => new Date(b.date) - new Date(a.date))
 }
 
@@ -125,7 +131,15 @@ export default defineConfig({
 
   head: [
     ['link', { rel: 'icon', href: '/blog/VKP.png' }],
-    ['link', { rel: 'alternate', type: 'application/rss+xml', title: 'VK Blog RSS', href: 'https://vishnukarthik.me/blog/feed.xml' }],
+    [
+      'link',
+      {
+        rel: 'alternate',
+        type: 'application/rss+xml',
+        title: 'VK Blog RSS',
+        href: 'https://vishnukarthik.me/blog/feed.xml',
+      },
+    ],
     ['meta', { property: 'og:site_name', content: 'Vishnukarthik S — Blog' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:image', content: 'https://vishnukarthik.me/blog/VKP.png' }],
@@ -149,7 +163,14 @@ export default defineConfig({
       ['meta', { name: 'twitter:title', content: fm.title }],
       ['meta', { name: 'twitter:description', content: desc }],
       ['meta', { name: 'description', content: desc }],
-      ...(fm.date ? [['meta', { property: 'article:published_time', content: new Date(fm.date).toISOString() }]] : []),
+      ...(fm.date
+        ? [
+            [
+              'meta',
+              { property: 'article:published_time', content: new Date(fm.date).toISOString() },
+            ],
+          ]
+        : []),
     ]
   },
 
@@ -158,9 +179,7 @@ export default defineConfig({
   },
 
   themeConfig: {
-    nav: [
-      { text: 'Portfolio', link: 'https://vishnukarthik.me/' },
-    ],
+    nav: [{ text: 'Portfolio', link: 'https://vishnukarthik.me/' }],
 
     sidebar: [
       {
