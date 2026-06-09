@@ -6,8 +6,16 @@
     <description>Sharp analysis on AI, semiconductors, and tech strategy.</description>
     <language>en-us</language>
     <atom:link href="https://vishnukarthik.me/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 30 May 2026 12:49:11 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2026 11:22:24 GMT</lastBuildDate>
     
+    <item>
+      <title><![CDATA[Are We Building Technology Faster Than We Can Govern It?]]></title>
+      <link>https://vishnukarthik.me/blog/tech-governance-gap</link>
+      <guid isPermaLink="true">https://vishnukarthik.me/blog/tech-governance-gap</guid>
+      <description><![CDATA[The gap between capability and accountability is widening. That gap is not a bug — it is a structural feature of how we build.]]></description>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
+      <author>contact@vishnukarthik.me (Vishnukarthik S)</author>
+    </item>
     <item>
       <title><![CDATA[Will AI Make Software Engineers More Valuable or Replace Most of Them?]]></title>
       <link>https://vishnukarthik.me/blog/ai-software-engineers</link>
