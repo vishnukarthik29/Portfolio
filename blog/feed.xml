@@ -6,8 +6,16 @@
     <description>Sharp analysis on AI, semiconductors, and tech strategy.</description>
     <language>en-us</language>
     <atom:link href="https://vishnukarthik.me/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 06 Aug 2026 06:07:03 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 14 Aug 2026 05:27:49 GMT</lastBuildDate>
     
+    <item>
+      <title><![CDATA[Generative AI Can Now Design Proteins From Scratch. The Screening Systems Built to Catch Bioweapons Weren't Built for That.]]></title>
+      <link>https://vishnukarthik.me/blog/generative-biological-ai</link>
+      <guid isPermaLink="true">https://vishnukarthik.me/blog/generative-biological-ai</guid>
+      <description><![CDATA[RFdiffusion went from research demo to clinical candidates in two years. The biosecurity infrastructure meant to watch it is still checking IDs against a guest list from 2010.]]></description>
+      <pubDate>Fri, 14 Aug 2026 00:00:00 GMT</pubDate>
+      <author>contact@vishnukarthik.me (Vishnukarthik S)</author>
+    </item>
     <item>
       <title><![CDATA[Over $100 Million In Bitcoin Stolen By 'Numerous' Hackers—How A Software Bug Made It Possible]]></title>
       <link>https://vishnukarthik.me/blog/coldcard-bitcoin-hack</link>
