@@ -1,6 +1,7 @@
 ---
 title: The Math Graveyard
 date: 2026-08-20
+description: Four open math problems fell to AI models in twelve weeks — what the Jacobian conjecture disproof and the Astra results actually prove, and what the hype skips.
 ---
 
 # The Math Graveyard
