@@ -3,49 +3,52 @@
     <div class="max-w-7xl mx-auto">
       <p class="font-mono text-sm text-black/60 dark:text-white/60 mb-4">&gt; Get to know me_</p>
 
-      <div class="grid lg:grid-cols-2 gap-10 items-start mb-16">
-        <div>
-          <h1 class="font-display uppercase text-6xl sm:text-7xl leading-none mb-6">About</h1>
-          <p class="font-mono text-lg leading-relaxed mb-4">
-            I'm a final year BSc Computer Science student who loves turning ideas into clean,
-            functional and impactful digital experiences.
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10">
+        <h1 class="font-display uppercase text-6xl sm:text-7xl leading-none">About</h1>
+        <div class="font-mono lg:text-right">
+          <p class="text-lg leading-relaxed mb-2 lg:ml-auto max-w-2xl">
+            I'm a passionate developer who loves turning ideas into clean, functional and impactful
+            digital experiences.
           </p>
-          <p class="font-mono text-sm text-black/60 dark:text-white/60">&gt; Think Build Grow_</p>
+          <p class="text-sm text-black/60 dark:text-white/60">&gt; Think Build Grow_</p>
+        </div>
+      </div>
+
+      <div class="grid lg:grid-cols-[minmax(0,340px)_1fr] gap-10 items-start mb-16">
+        <div
+          class="relative rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 aspect-4/5"
+        >
+          <img
+            src="../assets/images/vk.png"
+            alt="Vishnu Karthik"
+            class="w-full h-full object-cover grayscale contrast-125"
+          />
         </div>
 
-        <div class="grid sm:grid-cols-2 gap-x-6 gap-y-8 items-start">
-          <div>
-            <p class="font-mono text-xs tracking-widest text-black/60 dark:text-white/60 mb-3">
-              WHO I AM
-            </p>
-            <p class="font-mono text-sm leading-relaxed text-black/80 dark:text-white/80 mb-5">
-              I'm passionate about building scalable web applications and solving real-world
-              problems. I enjoy thoughtful UI, efficient code and creating products that actually
-              make a difference.
-            </p>
-          </div>
-
-          <div
-            class="relative rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 aspect-4/5"
-          >
-            <img
-              src="../assets/images/vk.png"
-              alt="Vishnu Karthik"
-              class="w-full h-full object-cover grayscale contrast-125"
-            />
-          </div>
+        <div>
+          <p class="font-mono text-xs tracking-widest text-black dark:text-white mb-3">WHO I AM</p>
+          <p class="font-mono text-sm leading-relaxed text-black dark:text-white mb-6 max-w-2xl">
+            I'm passionate about building scalable web applications and solving real-world problems
+            through technology. I enjoy turning complex ideas into simple, intuitive digital
+            experiences that are practical, reliable, and built to last.
+            <br />
+            I have a strong foundation in frontend and backend development, and I thrive in
+            collaborative environments where I can learn from others and contribute to meaningful
+            projects. I care about thoughtful UI, efficient code, strong architecture, and creating
+            products that are genuinely useful. I’m constantly exploring new technologies, improving
+            my problem-solving skills, and looking for better ways to build, optimize, and ship
+            meaningful software.
+          </p>
 
           <dl
-            class="sm:col-span-2 font-mono text-sm text-black/80 dark:text-white/80 grid grid-cols-[auto_minmax(0,1fr)] gap-x-3 gap-y-1.5"
+            class="font-mono text-sm text-black/80 dark:text-white/80 grid grid-cols-[auto_minmax(0,1fr)] gap-x-3 gap-y-1.5 max-w-xl"
           >
             <template v-for="item in infoList" :key="item.label">
-              <dt
-                class="flex justify-between gap-3 whitespace-nowrap text-black/60 dark:text-white/60"
-              >
-                <span>&gt; {{ item.label }}</span
+              <dt class="flex justify-between gap-3 whitespace-nowrap">
+                <span class="text-black/60 dark:text-white/60">&gt; {{ item.label }}</span
                 ><span>:</span>
               </dt>
-              <dd class="min-w-0 break-words">{{ item.value }}</dd>
+              <dd class="min-w-0 break-words text-black dark:text-white">{{ item.value }}</dd>
             </template>
           </dl>
         </div>
