@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen text-black dark:text-white transition-colors duration-300">
-    <ShaderBackdrop />
+    <MetalBackdrop />
     <div class="relative z-10">
       <Header />
       <main>
@@ -14,5 +14,5 @@
 <script setup>
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
-import ShaderBackdrop from '@/components/ShaderBackdrop.vue'
+import MetalBackdrop from '@/components/bg/MetalBackdrop.vue'
 </script>
