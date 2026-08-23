@@ -1,7 +1,6 @@
 <template>
-  <div
-    class="min-h-screen texture-bg bg-white text-black dark:bg-black dark:text-white transition-colors duration-300"
-  >
+  <div class="min-h-screen text-black dark:text-white transition-colors duration-300">
+    <ShaderBackdrop />
     <div class="relative z-10">
       <Header />
       <main>
@@ -15,4 +14,5 @@
 <script setup>
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
+import ShaderBackdrop from '@/components/ShaderBackdrop.vue'
 </script>

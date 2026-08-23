@@ -24,49 +24,6 @@ body {
   font-family: 'JetBrains Mono', ui-monospace, monospace;
 }
 
-/* Reusable diagonal noise + light-beam texture used behind hero-style sections */
-.texture-bg {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-}
-
-.texture-bg::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  background-image: repeating-linear-gradient(
-    115deg,
-    rgba(0, 0, 0, 0.05) 0px,
-    rgba(0, 0, 0, 0.05) 2px,
-    transparent 2px,
-    transparent 90px
-  );
-  pointer-events: none;
-}
-
-.dark .texture-bg::before {
-  background-image: repeating-linear-gradient(
-    115deg,
-    rgba(255, 255, 255, 0.05) 0px,
-    rgba(255, 255, 255, 0.05) 2px,
-    transparent 2px,
-    transparent 90px
-  );
-}
-
-.texture-bg::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  opacity: 0.4;
-  mix-blend-mode: overlay;
-  pointer-events: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
 .text-ghost {
   -webkit-text-stroke: 1.5px currentColor;
   color: transparent;
