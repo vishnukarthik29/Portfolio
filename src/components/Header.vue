@@ -9,9 +9,9 @@
       <div class="flex justify-between items-center h-14">
         <div class="flex-shrink-0">
           <a href="#home" class="flex items-center" aria-label="Back to top">
-            <!-- Major Mono Display keeps its readable capital forms on the lowercase codepoints;
-                 the uppercase ones are abstract geometric alternates. -->
-            <span class="font-logo lowercase text-2xl leading-none select-none">VK</span>
+            <!-- Uppercase on purpose: Major Mono Display maps its geometric display
+                 glyphs to the capitals; the lowercase ones are plain thin letterforms. -->
+            <span class="font-logo text-2xl leading-none select-none">VK</span>
           </a>
         </div>
 
