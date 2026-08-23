@@ -221,15 +221,8 @@ const syncFromHash = () => {
 }
 
 onMounted(() => {
-  // Honour a saved choice; otherwise fall back to the time of day
-  // (dark between 6 PM and 6 AM).
-  const stored = localStorage.getItem('theme')
-  if (stored === 'dark' || stored === 'light') {
-    applyDarkMode(stored === 'dark')
-  } else {
-    const hour = new Date().getHours()
-    applyDarkMode(hour >= 18 || hour < 6)
-  }
+  // Light is the default; dark only when the visitor has chosen it before.
+  applyDarkMode(localStorage.getItem('theme') === 'dark')
 
   syncFromHash()
   updateActiveSection()
