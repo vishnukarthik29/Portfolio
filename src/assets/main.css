@@ -24,6 +24,10 @@ body {
   font-family: 'JetBrains Mono', ui-monospace, monospace;
 }
 
+.font-logo {
+  font-family: 'Major Mono Display', 'JetBrains Mono', ui-monospace, monospace;
+}
+
 .text-ghost {
   -webkit-text-stroke: 1.5px currentColor;
   color: transparent;
