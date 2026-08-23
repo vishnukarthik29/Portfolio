@@ -1,6 +1,6 @@
 <template>
   <section class="px-6 sm:px-10 lg:px-16 pt-16 pb-20">
-    <div class="max-w-6xl mx-auto">
+    <div class="max-w-7xl mx-auto">
       <p class="font-mono text-sm text-black/60 dark:text-white/60 mb-4">&gt; Get to know me_</p>
 
       <div class="grid lg:grid-cols-2 gap-10 items-start mb-16">
@@ -13,7 +13,7 @@
           <p class="font-mono text-sm text-black/60 dark:text-white/60">&gt; Think Build Grow_</p>
         </div>
 
-        <div class="grid sm:grid-cols-2 gap-6 items-start">
+        <div class="grid sm:grid-cols-2 gap-x-6 gap-y-8 items-start">
           <div>
             <p class="font-mono text-xs tracking-widest text-black/60 dark:text-white/60 mb-3">
               WHO I AM
@@ -23,20 +23,31 @@
               problems. I enjoy thoughtful UI, efficient code and creating products that actually
               make a difference.
             </p>
-            <ul class="font-mono text-sm space-y-1.5 text-black/80 dark:text-white/80">
-              <li v-for="item in infoList" :key="item.label">
-                &gt; {{ item.label }}<span class="inline-block w-24">&nbsp;</span>: {{ item.value }}
-              </li>
-            </ul>
           </div>
 
-          <div class="relative rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 aspect-4/5">
+          <div
+            class="relative rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 aspect-4/5"
+          >
             <img
               src="../assets/images/vk.png"
               alt="Vishnu Karthik"
               class="w-full h-full object-cover grayscale contrast-125"
             />
           </div>
+
+          <dl
+            class="sm:col-span-2 font-mono text-sm text-black/80 dark:text-white/80 grid grid-cols-[auto_minmax(0,1fr)] gap-x-3 gap-y-1.5"
+          >
+            <template v-for="item in infoList" :key="item.label">
+              <dt
+                class="flex justify-between gap-3 whitespace-nowrap text-black/60 dark:text-white/60"
+              >
+                <span>&gt; {{ item.label }}</span
+                ><span>:</span>
+              </dt>
+              <dd class="min-w-0 break-words">{{ item.value }}</dd>
+            </template>
+          </dl>
         </div>
       </div>
 
@@ -74,7 +85,9 @@
                 {{ exp.duration }}
               </p>
               <p class="font-mono font-semibold text-sm mb-2">{{ exp.title }}</p>
-              <ul class="font-mono text-xs leading-relaxed text-black/70 dark:text-white/70 space-y-1 list-disc list-inside">
+              <ul
+                class="font-mono text-xs leading-relaxed text-black/70 dark:text-white/70 space-y-1 list-disc list-inside"
+              >
                 <li v-for="(point, idx) in exp.points" :key="idx">{{ point }}</li>
               </ul>
             </div>
@@ -105,10 +118,12 @@
           <p class="font-mono text-xs tracking-widest text-black/60 dark:text-white/60 mb-4">
             WHAT DRIVES ME
           </p>
-          <blockquote class="font-mono text-sm leading-relaxed text-black/80 dark:text-white/80 border-l-2 border-black/20 dark:border-white/20 pl-4">
+          <blockquote
+            class="font-mono text-sm leading-relaxed text-black/80 dark:text-white/80 border-l-2 border-black/20 dark:border-white/20 pl-4"
+          >
             I believe in continuous learning, clean code, and building things that are useful,
-            accessible and scalable. Every project is a step towards becoming a better developer
-            and human.
+            accessible and scalable. Every project is a step towards becoming a better developer and
+            human.
           </blockquote>
         </div>
       </div>
@@ -126,7 +141,7 @@
             style="image-rendering: crisp-edges"
           />
           <img
-            src="https://ghchart.rshah.org/ffffff/vishnukarthik29"
+            src="https://ghchart.rshah.org/4a4a4a/vishnukarthik29"
             alt="GitHub Contribution Chart"
             class="w-full rounded-lg hidden dark:block"
             style="image-rendering: crisp-edges"
@@ -151,7 +166,10 @@ const infoList = [
 ]
 
 const skills = [
-  { name: 'Frontend', items: ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'Tailwind CSS', 'Bootstrap', 'Vite'] },
+  {
+    name: 'Frontend',
+    items: ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'Tailwind CSS', 'Bootstrap', 'Vite'],
+  },
   { name: 'Backend', items: ['Node.js', 'Express.js', 'Python', 'C++', 'Nginx'] },
   { name: 'Data & ML', items: ['NumPy', 'Pandas', 'Matplotlib', 'Jupyter', 'Power BI'] },
   { name: 'Tools', items: ['Git', 'GitHub', 'VS Code', 'MySQL', 'MongoDB'] },

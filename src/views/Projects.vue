@@ -1,6 +1,6 @@
 <template>
   <section class="px-6 sm:px-10 lg:px-16 pt-16 pb-20">
-    <div class="max-w-6xl mx-auto">
+    <div class="max-w-7xl mx-auto">
       <p class="font-mono text-sm text-black/60 dark:text-white/60 mb-4">&gt; Things I've built_</p>
 
       <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10">
@@ -89,96 +89,6 @@ const selectedFilter = ref('All')
 
 const projects = [
   {
-    title: 'Toon Bulb',
-    description: 'Watch anime, movies, cartoons and more',
-    tech: ['HTML', 'CSS', 'JS', 'Node.js', 'MongoDB'],
-    category: 'Web Development',
-    link: 'https://github.com/vishnukarthik29/TOONBULB_WEBSITE',
-    icons: [
-      {
-        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
-        alt: 'HTML',
-      },
-      {
-        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
-        alt: 'CSS',
-      },
-      {
-        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-        alt: 'JavaScript',
-      },
-      {
-        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
-        alt: 'Node.js',
-      },
-      {
-        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
-        alt: 'MongoDB',
-      },
-    ],
-  },
-  {
-    title: 'Novel Dojo',
-    description: 'Read Manhua and Manga online',
-    tech: ['HTML', 'CSS', 'JS'],
-    category: 'Web Development',
-    icons: [
-      {
-        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
-        alt: 'HTML',
-      },
-      {
-        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
-        alt: 'CSS',
-      },
-      {
-        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-        alt: 'JavaScript',
-      },
-    ],
-  },
-  {
-    title: 'BMI Calculator',
-    description: 'Health-conscious app for BMI tracking',
-    tech: ['HTML', 'CSS', 'JS'],
-    category: 'Web Development',
-    icons: [
-      {
-        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
-        alt: 'HTML',
-      },
-      {
-        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
-        alt: 'CSS',
-      },
-      {
-        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-        alt: 'JavaScript',
-      },
-    ],
-  },
-  {
-    title: 'Currency Converter',
-    description: 'Convert currency in real time',
-    tech: ['Vue', 'Bootstrap', 'Node.js'],
-    category: 'Web Development',
-    link: 'https://github.com/vishnukarthik29/currency_converter',
-    icons: [
-      {
-        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg',
-        alt: 'Vue.js',
-      },
-      {
-        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
-        alt: 'Bootstrap',
-      },
-      {
-        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
-        alt: 'Node.js',
-      },
-    ],
-  },
-  {
     title: 'Http Server',
     description: 'Run your own server, own your data—powered by Python.',
     tech: ['Python'],
@@ -245,47 +155,11 @@ const projects = [
     ],
   },
   {
-    title: 'Car Price Prediction',
-    description:
-      'ML-powered car price estimator analyzing features to predict purchase prices accurately.',
-    tech: ['Python', 'Streamlit', 'MachineLearning'],
-    category: 'Machine Learning',
-    link: 'https://car-price-purchase-pred.streamlit.app/',
-    icons: [
-      {
-        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg',
-        alt: 'Python',
-      },
-      {
-        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/streamlit/streamlit-original.svg',
-        alt: 'Streamlit',
-      },
-    ],
-  },
-  {
     title: 'Facial Detection System',
     description: 'Real-time face detection and recognition system using deep learning algorithms.',
     tech: ['Python', 'Streamlit', 'DeepLearning'],
     category: 'Computer Vision',
     link: 'https://facial-detection.streamlit.app/',
-    icons: [
-      {
-        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg',
-        alt: 'Python',
-      },
-      {
-        src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/streamlit/streamlit-original.svg',
-        alt: 'Streamlit',
-      },
-    ],
-  },
-  {
-    title: 'House Price Prediction',
-    description:
-      'Predict real estate prices using regression models based on property features and location data.',
-    tech: ['Python', 'Streamlit', 'MachineLearning'],
-    category: 'Machine Learning',
-    link: 'https://housepricepredicition.streamlit.app/',
     icons: [
       {
         src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg',

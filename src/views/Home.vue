@@ -1,7 +1,10 @@
 <template>
   <!-- Hero -->
-  <section id="home" class="min-h-screen flex flex-col justify-center px-6 sm:px-10 lg:px-16 pt-28 pb-16">
-    <div class="max-w-6xl mx-auto w-full">
+  <section
+    id="home"
+    class="min-h-screen flex flex-col justify-center px-6 sm:px-10 lg:px-16 pt-28 pb-16"
+  >
+    <div class="max-w-7xl mx-auto w-full">
       <p class="font-mono text-sm tracking-widest text-black/60 dark:text-white/60 mb-4">
         SOFTWARE DEVELOPER
       </p>
@@ -20,19 +23,10 @@
         </h1>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-8 mb-10">
-        <div class="font-mono text-lg sm:text-xl leading-relaxed">
+      <div class="mb-10">
+        <div class="font-mono text-lg sm:text-xl leading-relaxed max-w-2xl">
           <p>I build digital experiences that are clean, functional and impactful.</p>
           <p class="mt-4 text-black/60 dark:text-white/60">&gt; Think Build Grow_</p>
-        </div>
-        <div
-          class="font-mono text-sm sm:text-base leading-relaxed text-black/60 dark:text-white/60 md:border-l border-black/10 dark:border-white/10 md:pl-8"
-        >
-          <p>
-            Final year BSc Computer Science student passionate about building scalable web
-            applications and solving real-world problems. Focused on clean code, performance and
-            great user experience.
-          </p>
         </div>
       </div>
 
@@ -122,31 +116,35 @@ import Contact from './Contact.vue'
 import { Github, Linkedin, Mail, ArrowUpRight, MessageCircle } from 'lucide-vue-next'
 
 const socials = [
-  { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/vishnu-karthik-035260357' },
+  {
+    icon: Linkedin,
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/vishnu-karthik-035260357',
+  },
   { icon: Github, label: 'GitHub', href: 'https://github.com/vishnukarthik29' },
   { icon: Mail, label: 'Mail', href: 'mailto:vishnukarthik2912@gmail.com' },
 ]
 
 const featured = [
   {
-    title: 'Toon Bulb',
-    description: 'Watch anime, movies, cartoons and more.',
-    link: 'https://github.com/vishnukarthik29/TOONBULB_WEBSITE',
-  },
-  {
     title: 'Stock Price Prediction',
     description: 'Predict future stock prices using Machine Learning with Python and Streamlit.',
     link: 'https://stocklstmbackup.streamlit.app/',
   },
   {
-    title: 'Watershed Detection',
-    description: 'Computer vision system for watershed segmentation and analysis.',
-    link: 'https://watershed-detection.streamlit.app/',
+    title: 'PDF Image Overlay Tool',
+    description: 'Add watermarks, stamps and images to PDF documents with drag-and-drop.',
+    link: 'https://pdf-image-overlay-tool.streamlit.app/',
   },
   {
-    title: 'Car Number Plate Detection',
-    description: 'Real-time license plate recognition using computer vision and ML.',
-    link: 'https://car-number-plate-detection.streamlit.app/',
+    title: 'Movie SQL Database',
+    description: 'SQL database for managing movie information, reviews and ratings.',
+    link: 'https://github.com/vishnukarthik29/Movie-SQL',
+  },
+  {
+    title: 'Http Server',
+    description: 'Run your own server, own your data—powered by Python.',
+    link: 'https://github.com/vishnukarthik29/http-server-python',
   },
 ]
 </script>

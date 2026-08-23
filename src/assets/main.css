@@ -29,3 +29,44 @@ body {
   color: transparent;
   opacity: 0.35;
 }
+
+/* Theme change wipes in as a circle from the top-right corner. */
+@keyframes in-circle-swoop {
+  from {
+    clip-path: circle(0% at 100% 0%);
+  }
+  to {
+    clip-path: circle(150% at 100% 0%);
+  }
+}
+
+html::view-transition-old(root),
+html::view-transition-new(root) {
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+
+html::view-transition-old(root) {
+  animation-name: none;
+}
+
+html::view-transition-new(root) {
+  animation-name: in-circle-swoop;
+}
+
+/* Keep the toggle itself out of the transition snapshot so it stays
+   interactive and doesn't ghost during the wipe. */
+.themeToggle,
+.st-sunMoonThemeToggleBtn,
+.st-sunMoonThemeToggleBtn *,
+.themeToggleInput,
+.sunMoon,
+.sunRay {
+  view-transition-name: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html::view-transition-new(root) {
+    animation-name: none;
+  }
+}
