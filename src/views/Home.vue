@@ -1,77 +1,152 @@
 <template>
-  <section id="home" class="min-h-screen flex items-center justify-center text-center">
-    <div class="pt-15">
-      <h2 class="text-4xl font-bold mb-4 text-black dark:text-white">Hey, I'm Vishnu Karthik</h2>
-      <p class="text-lg text-black dark:text-white mb-6">
-        A passionate developer crafting elegant web experiences with a touch of AI and ML
-        innovation.
+  <!-- Hero -->
+  <section id="home" class="min-h-screen flex flex-col justify-center px-6 sm:px-10 lg:px-16 pt-28 pb-16">
+    <div class="max-w-6xl mx-auto w-full">
+      <p class="font-mono text-sm tracking-widest text-black/60 dark:text-white/60 mb-4">
+        SOFTWARE DEVELOPER
       </p>
-      <!-- Social Buttons -->
-      <div class="flex flex-wrap justify-center gap-4 mb-6">
-        <a
-          :href="resumeUrl"
-          download
-          class="flex items-center gap-2 px-4 py-2 bg-[#E8E8E8] dark:bg-gray-800 text-black dark:text-white rounded-lg shadow hover:bg-gray-300 transition"
+
+      <div class="relative mb-14 sm:mb-8">
+        <h1
+          class="font-display uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-none relative z-10"
         >
-          <Download class="w-5 h-5" /> Resume
+          Vishnukarthik
+        </h1>
+        <h1
+          aria-hidden="true"
+          class="font-display uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-none absolute left-0 top-[0.55em] text-ghost select-none pointer-events-none hidden sm:block"
+        >
+          Vishnukarthik
+        </h1>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-10">
+        <div class="font-mono text-lg sm:text-xl leading-relaxed">
+          <p>I build digital experiences that are clean, functional and impactful.</p>
+          <p class="mt-4 text-black/60 dark:text-white/60">&gt; Think Build Grow_</p>
+        </div>
+        <div
+          class="font-mono text-sm sm:text-base leading-relaxed text-black/60 dark:text-white/60 md:border-l border-black/10 dark:border-white/10 md:pl-8"
+        >
+          <p>
+            Final year BSc Computer Science student passionate about building scalable web
+            applications and solving real-world problems. Focused on clean code, performance and
+            great user experience.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-4">
+        <a
+          href="#projects"
+          class="flex items-center gap-2 px-5 py-3 rounded-lg bg-black text-white dark:bg-white dark:text-black font-mono font-medium hover:opacity-85 transition"
+        >
+          View My Work <ArrowUpRight class="w-4 h-4" />
         </a>
         <a
-          href="https://www.linkedin.com/in/vishnu-karthik-035260357"
-          target="_blank"
-          aria-label="LinkediIn"
-          class="flex items-center gap-2 px-4 py-2 bg-[#E8E8E8] dark:bg-gray-800 text-black dark:text-white rounded-lg shadow hover:bg-gray-100 transition"
+          href="#contact"
+          class="flex items-center gap-2 px-5 py-3 rounded-lg border border-black/20 dark:border-white/20 font-mono font-medium hover:bg-black/5 dark:hover:bg-white/10 transition"
         >
-          <Linkedin class="w-5 h-5" />
+          Get In Touch <MessageCircle class="w-4 h-4" />
         </a>
+      </div>
+    </div>
+
+    <!-- Fixed social rail -->
+    <div class="hidden lg:flex flex-col gap-3 fixed left-6 bottom-10 z-40">
+      <a
+        v-for="social in socials"
+        :key="social.label"
+        :href="social.href"
+        :target="social.href.startsWith('http') ? '_blank' : undefined"
+        rel="noopener noreferrer"
+        :aria-label="social.label"
+        class="w-10 h-10 flex items-center justify-center rounded-lg bg-black text-white dark:bg-white dark:text-black hover:opacity-80 transition"
+      >
+        <component :is="social.icon" class="w-4 h-4" />
+      </a>
+    </div>
+  </section>
+
+  <!-- Featured Projects preview -->
+  <section class="px-6 sm:px-10 lg:px-16 pb-24">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center justify-between mb-6">
+        <p class="font-mono text-sm tracking-widest text-black/60 dark:text-white/60">
+          FEATURED PROJECTS &gt;_
+        </p>
         <a
-          href="https://github.com/vishnukarthik29"
-          target="_blank"
-          aria-label="Github"
-          class="flex items-center gap-2 px-4 py-2 bg-[#E8E8E8] dark:bg-gray-800 text-black dark:text-white rounded-lg shadow hover:bg-gray-100 transition"
+          href="#projects"
+          class="hidden sm:flex items-center gap-1 font-mono text-sm text-black/60 dark:text-white/60 hover:text-black dark:hover:text-white transition"
         >
-          <Github class="w-5 h-5" />
+          View all projects <ArrowUpRight class="w-3.5 h-3.5" />
         </a>
+      </div>
+
+      <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         <a
-          href="mailto:vishnukarthik2912@gmail.com"
-          aria-label="Mail"
-          class="flex items-center gap-2 px-4 py-2 bg-[#E8E8E8] dark:bg-gray-800 text-black dark:text-white rounded-lg shadow hover:bg-gray-100 transition"
+          v-for="project in featured"
+          :key="project.title"
+          :href="project.link || '#projects'"
+          :target="project.link ? '_blank' : undefined"
+          rel="noopener noreferrer"
+          class="group border border-black/10 dark:border-white/10 rounded-xl p-5 hover:border-black/30 dark:hover:border-white/30 transition-colors flex flex-col"
         >
-          <Mail class="w-5 h-5" />
+          <h3 class="font-mono font-semibold mb-2">{{ project.title }}</h3>
+          <p class="font-mono text-xs text-black/60 dark:text-white/60 mb-6 flex-1">
+            {{ project.description }}
+          </p>
+          <ArrowUpRight
+            class="w-4 h-4 text-black/40 dark:text-white/40 group-hover:text-black dark:group-hover:text-white transition-colors"
+          />
         </a>
-        <!-- <a
-          href="https://instagram.com/_vk__vinci_"
-          target="_blank"
-          class="flex items-center gap-2 px-4 py-2 bg-[#E8E8E8] dark:bg-gray-800 text-black dark:text-white rounded-lg shadow hover:bg-gray-100 transition"
-        >
-          <Instagram class="w-5 h-5" />
-        </a> -->
-      </div>
-      <div class="p-4">
-        <Time />
-      </div>
-      <div class="p-4">
-        <Technologies />
-      </div>
-      <div id="about">
-        <Aboutme />
-      </div>
-      <div id="projects">
-        <Projects />
-      </div>
-      <div id="contact">
-        <Contact />
       </div>
     </div>
   </section>
+
+  <div id="about">
+    <Aboutme />
+  </div>
+  <div id="projects">
+    <Projects />
+  </div>
+  <div id="contact">
+    <Contact />
+  </div>
 </template>
 
 <script setup>
-import Time from '../views/Time.vue'
-import Technologies from '../views/Technologies.vue'
 import Aboutme from './Aboutme.vue'
 import Projects from './Projects.vue'
 import Contact from './Contact.vue'
-const resumeUrl = `${import.meta.env.BASE_URL}vishnukarthik.pdf`
-// Lucide Icons
-import { Github, Linkedin, Mail, Instagram, Download } from 'lucide-vue-next'
+import { Github, Linkedin, Mail, ArrowUpRight, MessageCircle } from 'lucide-vue-next'
+
+const socials = [
+  { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/vishnu-karthik-035260357' },
+  { icon: Github, label: 'GitHub', href: 'https://github.com/vishnukarthik29' },
+  { icon: Mail, label: 'Mail', href: 'mailto:vishnukarthik2912@gmail.com' },
+]
+
+const featured = [
+  {
+    title: 'Toon Bulb',
+    description: 'Watch anime, movies, cartoons and more.',
+    link: 'https://github.com/vishnukarthik29/TOONBULB_WEBSITE',
+  },
+  {
+    title: 'Stock Price Prediction',
+    description: 'Predict future stock prices using Machine Learning with Python and Streamlit.',
+    link: 'https://stocklstmbackup.streamlit.app/',
+  },
+  {
+    title: 'Watershed Detection',
+    description: 'Computer vision system for watershed segmentation and analysis.',
+    link: 'https://watershed-detection.streamlit.app/',
+  },
+  {
+    title: 'Car Number Plate Detection',
+    description: 'Real-time license plate recognition using computer vision and ML.',
+    link: 'https://car-number-plate-detection.streamlit.app/',
+  },
+]
 </script>

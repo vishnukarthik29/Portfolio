@@ -1,99 +1,89 @@
 <template>
-  <section class="pt-20 p-5 sm:p-6 md:p-10 min-h-screen">
-    <h2 class="pt-4 text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-white mb-8">
-      My Projects
-    </h2>
+  <section class="px-6 sm:px-10 lg:px-16 pt-16 pb-20">
+    <div class="max-w-6xl mx-auto">
+      <p class="font-mono text-sm text-black/60 dark:text-white/60 mb-4">&gt; Things I've built_</p>
 
-    <!-- Filter Buttons -->
-    <div class="flex flex-wrap justify-center gap-3 mb-8">
-      <button
-        @click="selectedFilter = 'All'"
-        :class="[
-          'px-4 py-2 rounded-lg font-medium transition-all',
-          selectedFilter === 'All'
-            ? 'bg-blue-600 text-white shadow-lg'
-            : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600',
-        ]"
-      >
-        All Projects ({{ projects.length }})
-      </button>
-      <button
-        v-for="category in categories"
-        :key="category"
-        @click="selectedFilter = category"
-        :class="[
-          'px-4 py-2 rounded-lg font-medium transition-all',
-          selectedFilter === category
-            ? 'bg-blue-600 text-white shadow-lg'
-            : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600',
-        ]"
-      >
-        {{ category }} ({{ getProjectCountByCategory(category) }})
-      </button>
-    </div>
-
-    <!-- Projects Grid -->
-    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-      <div
-        v-for="project in filteredProjects"
-        :key="project.title"
-        class="bg-gray-100 dark:bg-gray-800 rounded-xl p-5 shadow hover:shadow-xl transition-all hover:-translate-y-1"
-      >
-        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-          {{ project.title }}
-        </h3>
-        <p class="text-xs text-gray-700 dark:text-gray-300 mb-3 line-clamp-3">
-          {{ project.description }}
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10">
+        <h1 class="font-display uppercase text-6xl sm:text-7xl leading-none">Projects</h1>
+        <p class="font-mono text-sm text-black/60 dark:text-white/60 max-w-xs">
+          A selection of projects where I solved problems, learned deeply and shipped impactful
+          solutions.
         </p>
+      </div>
 
-        <div class="flex flex-wrap gap-1.5 mb-3">
-          <span
-            v-for="tech in project.tech.slice(0, 3)"
-            :key="tech"
-            class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 text-xs px-2 py-0.5 rounded"
-          >
-            {{ tech }}
-          </span>
-          <span
-            v-if="project.tech.length > 3"
-            class="bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-xs px-2 py-0.5 rounded"
-          >
-            +{{ project.tech.length - 3 }}
-          </span>
-        </div>
-
-        <div class="flex gap-2 items-center mb-3">
-          <img
-            v-for="icon in project.icons.slice(0, 4)"
-            :key="icon.alt"
-            :src="icon.src"
-            :alt="icon.alt"
-            class="w-5 h-5"
-            loading="lazy"
-          />
-        </div>
-
-        <a
-          v-if="project.link"
-          :href="project.link"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-block w-full text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition"
+      <!-- Filter Buttons -->
+      <div
+        class="flex flex-wrap gap-6 mb-10 pb-4 border-b border-black/10 dark:border-white/10 font-mono text-sm"
+      >
+        <button
+          @click="selectedFilter = 'All'"
+          :class="
+            selectedFilter === 'All'
+              ? 'font-semibold text-black dark:text-white'
+              : 'text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white'
+          "
+          class="transition-colors"
         >
-          View Project →
+          All Projects
+        </button>
+        <button
+          v-for="category in categories"
+          :key="category"
+          @click="selectedFilter = category"
+          :class="
+            selectedFilter === category
+              ? 'font-semibold text-black dark:text-white'
+              : 'text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white'
+          "
+          class="transition-colors"
+        >
+          {{ category }}
+        </button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="grid gap-6 md:grid-cols-2">
+        <a
+          v-for="(project, index) in filteredProjects"
+          :key="project.title"
+          :href="project.link || undefined"
+          :target="project.link ? '_blank' : undefined"
+          rel="noopener noreferrer"
+          class="group border border-black/10 dark:border-white/10 rounded-xl p-6 hover:border-black/30 dark:hover:border-white/30 transition-colors flex flex-col"
+        >
+          <p class="font-mono text-xs text-black/40 dark:text-white/40 mb-3">
+            {{ String(index + 1).padStart(2, '0') }}
+          </p>
+          <h3 class="font-mono font-semibold text-lg mb-2">
+            {{ project.title }}
+          </h3>
+          <p class="font-mono text-sm text-black/60 dark:text-white/60 mb-4">
+            {{ project.description }}
+          </p>
+
+          <p class="font-mono text-xs text-black/40 dark:text-white/40 mb-4">
+            {{ project.tech.join(' · ') }}
+          </p>
+
+          <ArrowUpRight
+            class="w-4 h-4 mt-auto text-black/40 dark:text-white/40 group-hover:text-black dark:group-hover:text-white transition-colors"
+          />
         </a>
       </div>
-    </div>
 
-    <!-- No Results Message -->
-    <div v-if="filteredProjects.length === 0" class="text-center py-12">
-      <p class="text-gray-600 dark:text-gray-400 text-lg">No projects found in this category.</p>
+      <!-- No Results Message -->
+      <div v-if="filteredProjects.length === 0" class="text-center py-12">
+        <p class="font-mono text-black/60 dark:text-white/60">
+          No projects found in this category.
+        </p>
+      </div>
     </div>
   </section>
 </template>
 
 <script setup>
 import { ref, computed } from 'vue'
+import { ArrowUpRight } from 'lucide-vue-next'
 
 const selectedFilter = ref('All')
 
@@ -423,8 +413,4 @@ const filteredProjects = computed(() => {
   }
   return projects.filter((p) => p.category === selectedFilter.value)
 })
-
-const getProjectCountByCategory = (category) => {
-  return projects.filter((p) => p.category === category).length
-}
 </script>

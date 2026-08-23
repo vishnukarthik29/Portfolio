@@ -1,175 +1,194 @@
 <template>
-  <div class="pt-20 p-4 sm:p-6 md:p-10 min-h-screen">
-    <!-- Introduction Section -->
-    <div class="text-center px-4 sm:px-8 lg:px-16 mt-10 mb-14">
-      <img
-        src="../assets/images/vk.png"
-        alt="Profile Photo"
-        class="mx-auto w-40 h-40 sm:w-40 sm:h-40 rounded-full shadow-lg border-4 border-white object-cover"
-      />
-      <h1 class="text-2xl sm:text-3xl font-bold mt-4 text-black dark:text-white">
-        Hi, I'm Vishnu Karthik
-      </h1>
-      <p
-        class="text-black dark:text-white mt-4 max-w-4xl mx-auto leading-relaxed text-lg font-style-italic sm:text-base"
-      >
-        A passionate full-stack developer and AI/ML enthusiast with hands-on experience in building
-        scalable web applications and real-time dashboards. Currently in my Purusing of M.S.
-        Computer Science, I'm constantly learning and building innovative solutions with Vue.js,
-        Node.js, Python, and Machine Learning technologies.
-      </p>
-      <div class="block sm:mt-6 sm:flex sm:justify-center">
-        <h3
-          class="text-lg sm:text-xl md:text-3xl font-bold mt-6 text-black dark:text-white mx-auto"
-        >
-          Growth doesn’t happen in the spotlight. It happens in silence, in every late-night
-          compile.
-        </h3>
-      </div>
-    </div>
+  <section class="px-6 sm:px-10 lg:px-16 pt-16 pb-20">
+    <div class="max-w-6xl mx-auto">
+      <p class="font-mono text-sm text-black/60 dark:text-white/60 mb-4">&gt; Get to know me_</p>
 
-    <!-- Experience Cards -->
-    <div class="mb-12 px-4 sm:px-8">
-      <h2
-        class="text-xl sm:text-2xl font-semibold text-center mb-6 text-blue-700 dark:text-blue-400"
-      >
-        Experience
-      </h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
-        <div
-          v-for="(exp, index) in experiences"
-          :key="index"
-          class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg transition-transform hover:scale-105"
-        >
-          <h3 class="text-lg sm:text-xl font-bold text-gray-800 dark:text-white">
-            {{ exp.title }}
-          </h3>
-          <span class="text-sm text-gray-500">{{ exp.duration }}</span>
-          <ul
-            class="list-disc list-inside text-gray-700 dark:text-gray-300 mt-2 text-sm sm:text-base"
-          >
-            <li v-for="(point, idx) in exp.points" :key="idx">{{ point }}</li>
-          </ul>
+      <div class="grid lg:grid-cols-2 gap-10 items-start mb-16">
+        <div>
+          <h1 class="font-display uppercase text-6xl sm:text-7xl leading-none mb-6">About</h1>
+          <p class="font-mono text-lg leading-relaxed mb-4">
+            I'm a final year BSc Computer Science student who loves turning ideas into clean,
+            functional and impactful digital experiences.
+          </p>
+          <p class="font-mono text-sm text-black/60 dark:text-white/60">&gt; Think Build Grow_</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-6 items-start">
+          <div>
+            <p class="font-mono text-xs tracking-widest text-black/60 dark:text-white/60 mb-3">
+              WHO I AM
+            </p>
+            <p class="font-mono text-sm leading-relaxed text-black/80 dark:text-white/80 mb-5">
+              I'm passionate about building scalable web applications and solving real-world
+              problems. I enjoy thoughtful UI, efficient code and creating products that actually
+              make a difference.
+            </p>
+            <ul class="font-mono text-sm space-y-1.5 text-black/80 dark:text-white/80">
+              <li v-for="item in infoList" :key="item.label">
+                &gt; {{ item.label }}<span class="inline-block w-24">&nbsp;</span>: {{ item.value }}
+              </li>
+            </ul>
+          </div>
+
+          <div class="relative rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 aspect-4/5">
+            <img
+              src="../assets/images/vk.png"
+              alt="Vishnu Karthik"
+              class="w-full h-full object-cover grayscale contrast-125"
+            />
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="mb-12 px-4 sm:px-8">
-      <h2
-        class="text-xl sm:text-2xl font-semibold text-center mb-6 text-purple-700 dark:text-purple-400"
-      >
-        GitHub Contributions
-      </h2>
-      <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg max-w-4xl mx-auto">
-        <div class="w-full">
-          <!-- Light Mode (Green) -->
-          <img
-            src="https://ghchart.rshah.org/8B5CF6/vishnukarthik29"
-            alt="GitHub Contribution Chart"
-            class="w-full rounded-lg block dark:hidden transition-opacity duration-500"
-            style="image-rendering: crisp-edges"
-          />
-
-          <!-- Dark Mode (Blue) -->
-          <img
-            src="https://ghchart.rshah.org/0a4174/vishnukarthik29"
-            alt="GitHub Contribution Chart"
-            class="w-full rounded-lg hidden dark:block transition-opacity duration-500"
-            style="image-rendering: crisp-edges"
-          />
+      <div class="border-t border-black/10 dark:border-white/10 pt-14 grid lg:grid-cols-3 gap-12">
+        <!-- Skills -->
+        <div>
+          <p class="font-mono text-xs tracking-widest text-black/60 dark:text-white/60 mb-5">
+            SKILLS
+          </p>
+          <div v-for="group in skills" :key="group.name" class="mb-6">
+            <p class="font-mono text-sm font-semibold mb-2.5">{{ group.name }}</p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                v-for="tech in group.items"
+                :key="tech"
+                class="font-mono text-xs px-3 py-1.5 rounded-md bg-black/5 dark:bg-white/10"
+              >
+                {{ tech }}
+              </span>
+            </div>
+          </div>
         </div>
-        <p class="text-center text-sm text-gray-500 dark:text-gray-400 mt-4">
-          My GitHub contribution activity
+
+        <!-- Experience -->
+        <div>
+          <p class="font-mono text-xs tracking-widest text-black/60 dark:text-white/60 mb-5">
+            EXPERIENCE &amp; JOURNEY
+          </p>
+          <div class="space-y-6 border-l border-black/10 dark:border-white/10">
+            <div v-for="(exp, index) in experiences" :key="index" class="pl-5 relative">
+              <span
+                class="absolute -left-1.25 top-1.5 w-2 h-2 rounded-full bg-black dark:bg-white"
+              ></span>
+              <p class="font-mono text-xs text-black/50 dark:text-white/50 mb-1">
+                {{ exp.duration }}
+              </p>
+              <p class="font-mono font-semibold text-sm mb-2">{{ exp.title }}</p>
+              <ul class="font-mono text-xs leading-relaxed text-black/70 dark:text-white/70 space-y-1 list-disc list-inside">
+                <li v-for="(point, idx) in exp.points" :key="idx">{{ point }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education + Quote -->
+        <div>
+          <p class="font-mono text-xs tracking-widest text-black/60 dark:text-white/60 mb-5">
+            EDUCATION
+          </p>
+          <div class="space-y-4 mb-10">
+            <div
+              v-for="(edu, index) in education"
+              :key="index"
+              class="border border-black/10 dark:border-white/10 rounded-xl p-4"
+            >
+              <p class="font-mono font-semibold text-sm">{{ edu.title }}</p>
+              <p class="font-mono text-xs text-black/50 dark:text-white/50 mb-1">
+                {{ edu.duration }}
+              </p>
+              <p class="font-mono text-xs text-black/70 dark:text-white/70">
+                {{ edu.description }}
+              </p>
+            </div>
+          </div>
+
+          <p class="font-mono text-xs tracking-widest text-black/60 dark:text-white/60 mb-4">
+            WHAT DRIVES ME
+          </p>
+          <blockquote class="font-mono text-sm leading-relaxed text-black/80 dark:text-white/80 border-l-2 border-black/20 dark:border-white/20 pl-4">
+            I believe in continuous learning, clean code, and building things that are useful,
+            accessible and scalable. Every project is a step towards becoming a better developer
+            and human.
+          </blockquote>
+        </div>
+      </div>
+
+      <!-- GitHub Contributions -->
+      <div class="border-t border-black/10 dark:border-white/10 mt-14 pt-14">
+        <p class="font-mono text-xs tracking-widest text-black/60 dark:text-white/60 mb-5">
+          GITHUB CONTRIBUTIONS
         </p>
-      </div>
-    </div>
-
-    <!-- Education Cards -->
-    <div class="px-4 sm:px-8">
-      <h2
-        class="text-xl sm:text-2xl font-semibold text-center mb-6 text-green-700 dark:text-green-400"
-      >
-        Education
-      </h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
-        <div
-          v-for="(edu, index) in education"
-          :key="index"
-          class="bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-lg transition-transform hover:scale-105"
-        >
-          <h3 class="text-lg sm:text-xl font-bold text-gray-800 dark:text-white">
-            {{ edu.title }}
-          </h3>
-          <span class="text-sm text-gray-500">{{ edu.duration }}</span>
-          <p class="text-gray-700 dark:text-gray-300 mt-1 text-sm sm:text-base">
-            {{ edu.description }}
+        <div class="border border-black/10 dark:border-white/10 rounded-2xl p-6">
+          <img
+            src="https://ghchart.rshah.org/000000/vishnukarthik29"
+            alt="GitHub Contribution Chart"
+            class="w-full rounded-lg block dark:hidden"
+            style="image-rendering: crisp-edges"
+          />
+          <img
+            src="https://ghchart.rshah.org/ffffff/vishnukarthik29"
+            alt="GitHub Contribution Chart"
+            class="w-full rounded-lg hidden dark:block"
+            style="image-rendering: crisp-edges"
+          />
+          <p class="text-center font-mono text-xs text-black/50 dark:text-white/50 mt-4">
+            My GitHub contribution activity
           </p>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
-<script>
-export default {
-  name: 'AboutMe',
-  data() {
-    return {
-      experiences: [
-        {
-          title: 'Product Engineer  | Shomli Interiors',
-          duration: 'May 2024 - Present',
-          points: [
-            'Built and deployed an end-to-end HR, operations, and finance workflow platform (HRM, geo-attendance,purchase requests, AR dashboard, estimation & execution tracking), used daily by 100+ employees, saving 20+hours/week and improving cross-team decision-making.',
-            'Reduced proxy attendance incidents by 80% by deploying a geo-based attendance system with locationvalidation, improving on-site compliance across active sites.',
-            'Built an end-to-end Purchase Request workflow enabling operations teams to raise material requests andautomatically notify accounts via email, streamlining Purchase Order creation in Tally and reducing manualcoordination.',
-            'Developed an AR (Accounts Receivable) Dashboard providing real-time visibility into financial and operational metricsfor management.',
-          ],
-        },
-        // {
-        //   title: 'Full-Stack Developer (Freelance) | Shomli Interiors',
-        //   duration: 'May 2024 - June 2024',
-        //   points: [
-        //     'Built a real-time dashboard for the CEO to monitor site updates.',
-        //     'Designed intuitive UI to enhance operational visibility.',
-        //     'Delivered a modular backend using RESTful APIs for extensibility.',
-        //   ],
-        // },
-        {
-          title: 'Software Developer (Intern) | Nelly Software',
-          duration: 'Dec 2023 - Feb 2024',
-          points: [
-            'Contributed to frontend development using HTML, CSS, and JavaScript, improving UI responsiveness and cross-browsercompatibility.',
-            'Collaborated with senior developers on debugging, testing, and client-facing feature delivery.',
-            'Supported in code implementation and presentation to the client.',
-          ],
-        },
-      ],
-      education: [
-        {
-          title: 'Master of Science | Computer Science',
-          duration: 'Nov 2025 - Nov 2027',
-          description: 'Anna Univerisity - CDE',
-        },
-        {
-          title: 'Bachelor of Science | Computer Science',
-          duration: 'June 2021 - May 2024',
-          description: 'Ramkrishna Mission - Vivekananda College, Chennai - C.G.P.A: 7.4',
-        },
-        // {
-        //   title: 'Higher Secondary Education (Class 12)',
-        //   duration: 'June 2020 - May 2021',
-        //   description: 'Santhome Higher Secondary School, Chennai - 77%',
-        // },
-        // {
-        //   title: 'Secondary Education (Class 10)',
-        //   duration: 'June 2018 - May 2019',
-        //   description: 'Santhome Higher Secondary School, Chennai - 70%',
-        // },
-      ],
-    }
-  },
-}
-</script>
+<script setup>
+const infoList = [
+  { label: 'Name', value: 'Vishnukarthik' },
+  { label: 'Role', value: 'Software Developer' },
+  { label: 'Education', value: 'BSc Computer Science' },
+  { label: 'Location', value: 'Tamil Nadu, India' },
+  { label: 'Email', value: 'vishnukarthik2912@gmail.com' },
+  { label: 'Availability', value: 'Open for opportunities' },
+]
 
-<style scoped></style>
+const skills = [
+  { name: 'Frontend', items: ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'Tailwind CSS', 'Bootstrap', 'Vite'] },
+  { name: 'Backend', items: ['Node.js', 'Express.js', 'Python', 'C++', 'Nginx'] },
+  { name: 'Data & ML', items: ['NumPy', 'Pandas', 'Matplotlib', 'Jupyter', 'Power BI'] },
+  { name: 'Tools', items: ['Git', 'GitHub', 'VS Code', 'MySQL', 'MongoDB'] },
+]
+
+const experiences = [
+  {
+    title: 'Product Engineer | Shomli Interiors',
+    duration: 'May 2024 - Present',
+    points: [
+      'Built and deployed an end-to-end HR, operations, and finance workflow platform (HRM, geo-attendance, purchase requests, AR dashboard, estimation & execution tracking), used daily by 100+ employees, saving 20+ hours/week and improving cross-team decision-making.',
+      'Reduced proxy attendance incidents by 80% by deploying a geo-based attendance system with location validation.',
+      'Built an end-to-end Purchase Request workflow enabling operations teams to raise material requests and automatically notify accounts via email.',
+      'Developed an AR (Accounts Receivable) Dashboard providing real-time visibility into financial and operational metrics.',
+    ],
+  },
+  {
+    title: 'Software Developer (Intern) | Nelly Software',
+    duration: 'Dec 2023 - Feb 2024',
+    points: [
+      'Contributed to frontend development using HTML, CSS, and JavaScript, improving UI responsiveness and cross-browser compatibility.',
+      'Collaborated with senior developers on debugging, testing, and client-facing feature delivery.',
+      'Supported code implementation and presentation to the client.',
+    ],
+  },
+]
+
+const education = [
+  {
+    title: 'Master of Science | Computer Science',
+    duration: 'Nov 2025 - Nov 2027',
+    description: 'Anna University - CDE',
+  },
+  {
+    title: 'Bachelor of Science | Computer Science',
+    duration: 'June 2021 - May 2024',
+    description: 'Ramkrishna Mission - Vivekananda College, Chennai - C.G.P.A: 7.4',
+  },
+]
+</script>
