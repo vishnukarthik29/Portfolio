@@ -6,8 +6,16 @@
     <description>Sharp analysis on AI, semiconductors, and tech strategy.</description>
     <language>en-us</language>
     <atom:link href="https://vishnukarthik.me/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 23 Aug 2026 18:53:36 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2026 07:29:34 GMT</lastBuildDate>
     
+    <item>
+      <title><![CDATA[Fable 5.1 Is Anthropic's Apology Letter. It's Written in Benchmarks.]]></title>
+      <link>https://vishnukarthik.me/blog/fable-5-1</link>
+      <guid isPermaLink="true">https://vishnukarthik.me/blog/fable-5-1</guid>
+      <description><![CDATA[Three months after the government pulled Fable 5 off the market, Anthropic shipped the sequel. It is not a bigger model. It is a narrower one, aimed precisely at the thing that got the last one banned.]]></description>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+      <author>contact@vishnukarthik.me (Vishnukarthik S)</author>
+    </item>
     <item>
       <title><![CDATA[The Math Graveyard]]></title>
       <link>https://vishnukarthik.me/blog/the-math-graveyard</link>
