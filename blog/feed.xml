@@ -6,8 +6,16 @@
     <description>Sharp analysis on AI, semiconductors, and tech strategy.</description>
     <language>en-us</language>
     <atom:link href="https://vishnukarthik.me/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 02 Sep 2026 07:29:34 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 16 Sep 2026 06:55:19 GMT</lastBuildDate>
     
+    <item>
+      <title><![CDATA[The Equation That Ate a Data Center]]></title>
+      <link>https://vishnukarthik.me/blog/navier-stokes-ai</link>
+      <guid isPermaLink="true">https://vishnukarthik.me/blog/navier-stokes-ai</guid>
+      <description><![CDATA[For a century, Navier-Stokes has decided whether fluid motion stays smooth or tears itself apart. This month, AI systems went looking for the tear.]]></description>
+      <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
+      <author>contact@vishnukarthik.me (Vishnukarthik S)</author>
+    </item>
     <item>
       <title><![CDATA[Fable 5.1 Is Anthropic's Apology Letter. It's Written in Benchmarks.]]></title>
       <link>https://vishnukarthik.me/blog/fable-5-1</link>
