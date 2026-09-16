@@ -1,0 +1,62 @@
+---
+title: "The Equation That Ate a Data Center"
+description: "For a century, Navier-Stokes has decided whether fluid motion stays smooth or tears itself apart. This month, AI systems went looking for the tear."
+date: 2026-09-16
+tags: ["ai", "mathematics", "millennium-prize"]
+---
+
+# The Equation That Ate a Data Center
+
+In 1822, Claude-Louis Navier wrote down an equation for how fluids move. Over the next few decades George Stokes refined it, and the result — Navier-Stokes — became the closest thing physics has to a universal law for liquids and gases. It's in the code that designs airplane wings, the models that forecast hurricanes, the simulations that predict how blood moves through an artery.
+
+And for just as long, mathematicians have been unable to answer a question that sounds embarrassingly basic: does the equation ever break?
+
+Specifically — if a three-dimensional fluid starts out moving smoothly, with finite energy, does it stay smooth forever? Or can it concentrate all its energy into a single point and reach infinite speed in finite time? That question, "existence and smoothness," is one of the Clay Mathematics Institute's seven Millennium Prize Problems. It has carried a $1 million bounty since 2000. Until a few weeks ago, it belonged in the same category as the Riemann Hypothesis — a problem everyone respects and nobody expects to see fall soon.
+
+Then, over about a week in September 2026, the ground moved twice.
+
+## Singularities, or how fluids die
+
+Picture a whirlpool spinning down a drain. Most of the time the physics stays tame — the fluid decelerates, viscosity smooths things out, nothing goes to infinity. A "singularity" is the name for the rare case where it doesn't: where velocity at some point genuinely blows up, in finite time, despite the equation's built-in tendency to damp motion out.
+
+Nobody has ever found one for the real, unforced, boundary-free Navier-Stokes equations. Not by hand, not by computer, not by anything — which is exactly the ambiguity the Millennium Prize is offering a million dollars to resolve, one way or the other.
+
+## DeepMind found the shape of a blow-up
+
+The first move came from Google DeepMind, whose researchers spent the past few years building physics-informed neural networks — PINNs — that don't just approximate solutions but are trained with the governing equations baked directly into the loss function. The network gets penalized not only for missing the data but for violating Navier-Stokes itself.
+
+DeepMind's team reported the first systematic discovery of entirely new families of unstable singularities, across three different fluid equations, and noticed a consistent pattern in how the solutions behaved as they grew more unstable. Crucially, none of it counted as proof — these were extraordinarily precise numerical candidates. Outside mathematicians described the residual errors as small enough that the solutions could plausibly serve as the seed for a real, human-verified proof down the line. Over a few years of refinement, the network's precision improved by roughly a billion-fold.
+
+That's the honest version of what AI had done as of last month: not solved the problem, but handed mathematicians an unnervingly precise map of where a singularity might live, for them to go verify by hand.
+
+## Then OpenAI said it found the real thing
+
+On September 8, OpenAI announced something much bigger: not a numerical candidate, but a claimed proof — complete with a machine-checked formalization in the Lean proof assistant — that the "breakdown" version of the problem is settled. The company said the result came from roughly 10,000 coordinating agents running on an unreleased internal model, working for about 88 hours, and that it establishes something specific: a three-dimensional incompressible fluid that starts out smooth and at rest, pushed by a smooth external force and holding finite energy throughout, can still develop a genuine singularity in finite time.
+
+The mechanism, as OpenAI described it, is almost visual: a vortex that spirals inward and stretches out like a piece of pulled taffy, its core shrinking as it speeds up, all while somehow keeping total energy finite — until, at one instant, it doesn't.
+
+The scale of the effort is worth sitting with. Roughly ten thousand concurrent agents produced on the order of 130 billion output tokens over those 88 hours, at a compute cost one outside estimate put near $6 million — about six times the prize money it was chasing. OpenAI has said it has no intention of claiming that prize.
+
+It's worth being precise about what this does and doesn't settle. This is the "breakdown" statement — a *forced* fluid can blow up. The harder, more famous half of the Millennium Prize — whether an *unforced* fluid, left entirely alone, can still do this — remains open. Mathematician Nick McGreivy, writing shortly after the announcement, made the point plainly: it's much easier to find a singularity in a forced fluid than an unforced one, simply because you're allowed to push on it however helps. The breakdown criteria may well be satisfied, he argued, but full existence-and-smoothness for the equation as originally posed is still an open problem.
+
+## The part nobody expected: a credit war
+
+What actually dominated the news cycle wasn't the math. OpenAI said the effort began on September 1, after its researchers heard rumors that two Millennium Prize problems had already been quietly solved, and pointed an unreleased internal model at what remained. The rumor turned out to be about real, unpublished work: the announcement landed one day after NYU mathematician Tristan Buckmaster and Anthropic researcher Levent Alpöge had posted their own Lean-verified blow-up results for related fluid equations.
+
+What followed was messy. Buckmaster and Alpöge alleged that OpenAI had rushed out its own version after learning of their unpublished progress — with Buckmaster specifically alleging pressure to drop a co-author, and threats to his career if he didn't. OpenAI has denied wrongdoing, maintaining that its systems reached the result independently and without access to anyone's private data.
+
+Whatever the eventual outcome, it's a telling footnote to a mathematical milestone: the fight over who gets credit for finding the crack in an equation moved faster than the community's ability to verify the crack itself. A machine-checked Lean formalization gives reviewers a much more precise target than prose would, but it doesn't by itself settle questions of correctness in how the problem was framed, where the ideas originated, or who deserves authorship — scrutiny on all three fronts is still ongoing.
+
+## What this actually says about AI and math
+
+It's tempting to read "AI solves Millennium Prize problem" as a headline about superintelligence arriving early. The more interesting reading is narrower, and more useful.
+
+Both approaches here — DeepMind's PINNs and OpenAI's agent swarm — worked because the underlying task is *verifiable*. A candidate singularity, or a step in a proof, can be checked computationally: does it satisfy the equation, does the Lean formalization type-check, does the residual error shrink toward zero. That's the same property that makes reinforcement learning work so well on math and code, and so poorly on something like drug safety, which takes years of human trials to confirm and can't be checked by a compiler.
+
+So the honest takeaway isn't "AI does math now." It's narrower than that: wherever a domain has a fast, mechanical way to check an answer, throwing enormous compute at generate-and-verify search stops looking like a party trick and starts looking like a method. Fluid dynamics happens to have just enough of that structure — Lean can check a proof, a PINN's loss function can score a candidate — to make it a target. Most of biology, and a great deal of applied engineering, doesn't have that shortcut, and won't get one just because the compute budget grows.
+
+The unforced Navier-Stokes problem — the original, harder half of the million-dollar question — is still sitting there, unresolved, exactly as of this week. Whether it falls to the same kind of search is the actual experiment now underway.
+
+---
+
+*Further reading: [DeepMind's writeup on the singularity discovery](https://deepmind.google/blog/discovering-new-solutions-to-century-old-problems-in-fluid-dynamics/), [OpenAI's announcement](https://openai.com/index/navier-stokes-solution/), and [Nick McGreivy's technical breakdown](https://nickmcgreivy.substack.com/p/how-openai-found-a-singularity-in) of what the proof does and doesn't establish.*
