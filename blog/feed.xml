@@ -6,8 +6,16 @@
     <description>Sharp analysis on AI, semiconductors, and tech strategy.</description>
     <language>en-us</language>
     <atom:link href="https://vishnukarthik.me/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 16 Sep 2026 06:55:19 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2026 12:02:04 GMT</lastBuildDate>
     
+    <item>
+      <title><![CDATA[Why CRUD Is the Easy Part of Business Software]]></title>
+      <link>https://vishnukarthik.me/blog/crud-is-the-easy-part</link>
+      <guid isPermaLink="true">https://vishnukarthik.me/blog/crud-is-the-easy-part</guid>
+      <description><![CDATA[Create, read, update, delete is a weekend of work. The business is everything that decides when those four verbs are allowed, and that is where projects actually die.]]></description>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
+      <author>contact@vishnukarthik.me (Vishnukarthik S)</author>
+    </item>
     <item>
       <title><![CDATA[The Equation That Ate a Data Center]]></title>
       <link>https://vishnukarthik.me/blog/navier-stokes-ai</link>
