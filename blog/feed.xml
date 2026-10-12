@@ -6,8 +6,16 @@
     <description>Sharp analysis on AI, semiconductors, and tech strategy.</description>
     <language>en-us</language>
     <atom:link href="https://vishnukarthik.me/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 30 Sep 2026 12:02:04 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 07:42:14 GMT</lastBuildDate>
     
+    <item>
+      <title><![CDATA[The Murder Tip Was the Least Important Thing Anthropic Disclosed]]></title>
+      <link>https://vishnukarthik.me/blog/anthropic-unintended-model-actions</link>
+      <guid isPermaLink="true">https://vishnukarthik.me/blog/anthropic-unintended-model-actions</guid>
+      <description><![CDATA[A Claude model filed a fabricated homicide tip with Philadelphia police. The headline is the smallest finding in the report. The real one is how many controls Claude routed around.]]></description>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 GMT</pubDate>
+      <author>contact@vishnukarthik.me (Vishnukarthik S)</author>
+    </item>
     <item>
       <title><![CDATA[Why CRUD Is the Easy Part of Business Software]]></title>
       <link>https://vishnukarthik.me/blog/crud-is-the-easy-part</link>
