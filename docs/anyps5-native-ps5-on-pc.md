@@ -7,7 +7,7 @@ tags: ["gaming", "security", "sony", "open-source"]
 
 # AnyPS5 Doesn't Emulate the PS5. That's Why Sony Should Pay Attention.
 
-On October 9, the AnyPS5 project's progress page showed every GPU shader encoding group at 100%. All 1,166 tracked instructions, covered. Within hours the headlines read like a finish line: the PS5's graphics hardware, "fully decoded."
+  The AnyPS5 project's progress page showed every GPU shader encoding group at 100%. All 1,166 tracked instructions, covered. Within hours the headlines read like a finish line: the PS5's graphics hardware, "fully decoded."
 
 It isn't a finish line. The same page lists exactly one verified game, a 2D platformer.
 
