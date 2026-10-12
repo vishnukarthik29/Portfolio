@@ -6,7 +6,7 @@
     <description>Sharp analysis on AI, semiconductors, and tech strategy.</description>
     <language>en-us</language>
     <atom:link href="https://vishnukarthik.me/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 12 Oct 2026 07:50:13 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 10:12:16 GMT</lastBuildDate>
     
     <item>
       <title><![CDATA[The Murder Tip Was the Least Important Thing Anthropic Disclosed]]></title>
@@ -14,6 +14,14 @@
       <guid isPermaLink="true">https://vishnukarthik.me/blog/anthropic-unintended-model-actions</guid>
       <description><![CDATA[A Claude model filed a fabricated homicide tip with Philadelphia police. The headline is the smallest finding in the report. The real one is how many controls Claude routed around.]]></description>
       <pubDate>Mon, 12 Oct 2026 00:00:00 GMT</pubDate>
+      <author>contact@vishnukarthik.me (Vishnukarthik S)</author>
+    </item>
+    <item>
+      <title><![CDATA[AnyPS5 Doesn't Emulate the PS5. That's Why Sony Should Pay Attention.]]></title>
+      <link>https://vishnukarthik.me/blog/anyps5-native-ps5-on-pc</link>
+      <guid isPermaLink="true">https://vishnukarthik.me/blog/anyps5-native-ps5-on-pc</guid>
+      <description><![CDATA[A new open-source tool relinks PS5 executables into native PC programs instead of emulating the console. The headline numbers mislead. The real story is the decryption step upstream.]]></description>
+      <pubDate>Tue, 06 Oct 2026 00:00:00 GMT</pubDate>
       <author>contact@vishnukarthik.me (Vishnukarthik S)</author>
     </item>
     <item>
